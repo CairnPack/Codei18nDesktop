@@ -46,7 +46,7 @@ go tool mygo generate          # 修改 locales/*.json 后重新生成 locales/c
 go tool mygo i18n check        # 检查各语言目录是否完整
 ```
 
-发布时 `go.mod` 引用 `github.com/CairnPack/codei18n` 的提交（当前为 core 的 feat/a5-langdetect 分支头）；core 合并并打 tag 后更新为 tag。
+`go.mod` 引用 core 的发布 tag，当前为 `github.com/CairnPack/codei18n v0.2.0`。core 发布新版本后，执行 `go get github.com/CairnPack/codei18n@<tag>` 更新。
 
 ## 架构
 
