@@ -51,6 +51,10 @@ type pageState struct {
 	languageSet   string          // 最近一次应用的 UI 语言（与 languageChoice 不同时调用 Shell.SetLocale）
 	watch         bool            // 文件监视开关的编辑值
 	maxParallel   float64         // 并行项目上限的编辑值
+	// browserRow 是注释浏览器虚拟列表中选中行在筛选结果里的位置（每帧由 Browser.Selected 推出）。
+	browserRow int
+	// browserSplit 是注释浏览器列表与详情窗格的分割比例（百分比，0 表示使用默认值）。
+	browserSplit float32
 }
 
 // View 构建整个窗口：左侧项目侧栏，右侧当前页面；整个窗口接受文件夹拖放。

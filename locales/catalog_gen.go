@@ -1517,3 +1517,1805 @@ func GsMaxParallelHint() string { return In(i18n.Locale()).GsMaxParallelHint() }
 func (msgs Messages) GsMaxParallelHint() string {
 	return Catalog.Format(msgs.locale, "gsMaxParallelHint", nil)
 }
+
+// OvNotInitTitle says "This project is not initialized"
+// in the language the app shows.
+//
+// Overview of a project without a .codei18n configuration.
+func OvNotInitTitle() string { return In(i18n.Locale()).OvNotInitTitle() }
+
+// OvNotInitTitle says "This project is not initialized"
+// in the language of msgs.
+//
+// Overview of a project without a .codei18n configuration.
+func (msgs Messages) OvNotInitTitle() string {
+	return Catalog.Format(msgs.locale, "ovNotInitTitle", nil)
+}
+
+// OvNotInitHint says "Initializing writes the Codei18n configuration (languages, exclude rules, provider) into the project folder. Your sou…"
+// in the language the app shows.
+//
+// Explanation under the not-initialized title.
+func OvNotInitHint() string { return In(i18n.Locale()).OvNotInitHint() }
+
+// OvNotInitHint says "Initializing writes the Codei18n configuration (languages, exclude rules, provider) into the project folder. Your sou…"
+// in the language of msgs.
+//
+// Explanation under the not-initialized title.
+func (msgs Messages) OvNotInitHint() string {
+	return Catalog.Format(msgs.locale, "ovNotInitHint", nil)
+}
+
+// OvInitialize says "Initialize…"
+// in the language the app shows.
+//
+// Button opening the initialization wizard.
+func OvInitialize() string { return In(i18n.Locale()).OvInitialize() }
+
+// OvInitialize says "Initialize…"
+// in the language of msgs.
+//
+// Button opening the initialization wizard.
+func (msgs Messages) OvInitialize() string {
+	return Catalog.Format(msgs.locale, "ovInitialize", nil)
+}
+
+// OvLoading says "Loading project status…"
+// in the language the app shows.
+//
+// Shown while the quick load runs.
+func OvLoading() string { return In(i18n.Locale()).OvLoading() }
+
+// OvLoading says "Loading project status…"
+// in the language of msgs.
+//
+// Shown while the quick load runs.
+func (msgs Messages) OvLoading() string {
+	return Catalog.Format(msgs.locale, "ovLoading", nil)
+}
+
+// OvProjectError says "Problem: {error}"
+// in the language the app shows.
+//
+// Last load or task error of the project; error is already redacted.
+func OvProjectError(error string) string { return In(i18n.Locale()).OvProjectError(error) }
+
+// OvProjectError says "Problem: {error}"
+// in the language of msgs.
+//
+// Last load or task error of the project; error is already redacted.
+func (msgs Messages) OvProjectError(error string) string {
+	return Catalog.Format(msgs.locale, "ovProjectError", map[string]any{"error": error})
+}
+
+// OvStatComments says "Comments"
+// in the language the app shows.
+//
+// Stat card: number of comments in the mappings.
+func OvStatComments() string { return In(i18n.Locale()).OvStatComments() }
+
+// OvStatComments says "Comments"
+// in the language of msgs.
+//
+// Stat card: number of comments in the mappings.
+func (msgs Messages) OvStatComments() string {
+	return Catalog.Format(msgs.locale, "ovStatComments", nil)
+}
+
+// OvStatTranslated says "Translated"
+// in the language the app shows.
+//
+// Stat card: comments that have a text in the local language.
+func OvStatTranslated() string { return In(i18n.Locale()).OvStatTranslated() }
+
+// OvStatTranslated says "Translated"
+// in the language of msgs.
+//
+// Stat card: comments that have a text in the local language.
+func (msgs Messages) OvStatTranslated() string {
+	return Catalog.Format(msgs.locale, "ovStatTranslated", nil)
+}
+
+// OvStatPending says "Pending"
+// in the language the app shows.
+//
+// Stat card: comments waiting for translation.
+func OvStatPending() string { return In(i18n.Locale()).OvStatPending() }
+
+// OvStatPending says "Pending"
+// in the language of msgs.
+//
+// Stat card: comments waiting for translation.
+func (msgs Messages) OvStatPending() string {
+	return Catalog.Format(msgs.locale, "ovStatPending", nil)
+}
+
+// OvStatFailed says "Failed"
+// in the language the app shows.
+//
+// Stat card: comments whose last translation failed.
+func OvStatFailed() string { return In(i18n.Locale()).OvStatFailed() }
+
+// OvStatFailed says "Failed"
+// in the language of msgs.
+//
+// Stat card: comments whose last translation failed.
+func (msgs Messages) OvStatFailed() string {
+	return Catalog.Format(msgs.locale, "ovStatFailed", nil)
+}
+
+// OvLanguages says "Source languages"
+// in the language the app shows.
+//
+// Heading of the detected source language distribution.
+func OvLanguages() string { return In(i18n.Locale()).OvLanguages() }
+
+// OvLanguages says "Source languages"
+// in the language of msgs.
+//
+// Heading of the detected source language distribution.
+func (msgs Messages) OvLanguages() string {
+	return Catalog.Format(msgs.locale, "ovLanguages", nil)
+}
+
+// OvNoLanguages says "No comments scanned yet"
+// in the language the app shows.
+//
+// Shown when the language distribution is empty.
+func OvNoLanguages() string { return In(i18n.Locale()).OvNoLanguages() }
+
+// OvNoLanguages says "No comments scanned yet"
+// in the language of msgs.
+//
+// Shown when the language distribution is empty.
+func (msgs Messages) OvNoLanguages() string {
+	return Catalog.Format(msgs.locale, "ovNoLanguages", nil)
+}
+
+// OvLangCount says "{lang}: {count}"
+// in the language the app shows.
+//
+// One entry of the language distribution; lang is a language code.
+func OvLangCount(lang string, count int) string { return In(i18n.Locale()).OvLangCount(lang, count) }
+
+// OvLangCount says "{lang}: {count}"
+// in the language of msgs.
+//
+// One entry of the language distribution; lang is a language code.
+func (msgs Messages) OvLangCount(lang string, count int) string {
+	return Catalog.Format(msgs.locale, "ovLangCount", map[string]any{"lang": lang, "count": count})
+}
+
+// OvActions says "Actions"
+// in the language the app shows.
+//
+// Heading of the project action buttons.
+func OvActions() string { return In(i18n.Locale()).OvActions() }
+
+// OvActions says "Actions"
+// in the language of msgs.
+//
+// Heading of the project action buttons.
+func (msgs Messages) OvActions() string {
+	return Catalog.Format(msgs.locale, "ovActions", nil)
+}
+
+// OvScan says "Scan / extract"
+// in the language the app shows.
+//
+// Button: scan the project and extract comments (incremental).
+func OvScan() string { return In(i18n.Locale()).OvScan() }
+
+// OvScan says "Scan / extract"
+// in the language of msgs.
+//
+// Button: scan the project and extract comments (incremental).
+func (msgs Messages) OvScan() string {
+	return Catalog.Format(msgs.locale, "ovScan", nil)
+}
+
+// OvTranslate says "Translate missing"
+// in the language the app shows.
+//
+// Button: translate comments that have no local text.
+func OvTranslate() string { return In(i18n.Locale()).OvTranslate() }
+
+// OvTranslate says "Translate missing"
+// in the language of msgs.
+//
+// Button: translate comments that have no local text.
+func (msgs Messages) OvTranslate() string {
+	return Catalog.Format(msgs.locale, "ovTranslate", nil)
+}
+
+// OvPrune says "Prune orphans"
+// in the language the app shows.
+//
+// Button: remove mapping entries whose comments no longer exist.
+func OvPrune() string { return In(i18n.Locale()).OvPrune() }
+
+// OvPrune says "Prune orphans"
+// in the language of msgs.
+//
+// Button: remove mapping entries whose comments no longer exist.
+func (msgs Messages) OvPrune() string {
+	return Catalog.Format(msgs.locale, "ovPrune", nil)
+}
+
+// OvPruneCount says "{count, plural, one {Prune # orphan} other {Prune # orphans}}"
+// in the language the app shows.
+//
+// Prune button when the last scan found orphans.
+func OvPruneCount(count int) string { return In(i18n.Locale()).OvPruneCount(count) }
+
+// OvPruneCount says "{count, plural, one {Prune # orphan} other {Prune # orphans}}"
+// in the language of msgs.
+//
+// Prune button when the last scan found orphans.
+func (msgs Messages) OvPruneCount(count int) string {
+	return Catalog.Format(msgs.locale, "ovPruneCount", map[string]any{"count": count})
+}
+
+// OvRetryFailed says "Retry failed"
+// in the language the app shows.
+//
+// Button: translate again the comments that failed last time.
+func OvRetryFailed() string { return In(i18n.Locale()).OvRetryFailed() }
+
+// OvRetryFailed says "Retry failed"
+// in the language of msgs.
+//
+// Button: translate again the comments that failed last time.
+func (msgs Messages) OvRetryFailed() string {
+	return Catalog.Format(msgs.locale, "ovRetryFailed", nil)
+}
+
+// OvBrowse says "Open comment browser"
+// in the language the app shows.
+//
+// Button opening the comment browser.
+func OvBrowse() string { return In(i18n.Locale()).OvBrowse() }
+
+// OvBrowse says "Open comment browser"
+// in the language of msgs.
+//
+// Button opening the comment browser.
+func (msgs Messages) OvBrowse() string {
+	return Catalog.Format(msgs.locale, "ovBrowse", nil)
+}
+
+// OvSettings says "Project settings"
+// in the language the app shows.
+//
+// Button opening the project settings page.
+func OvSettings() string { return In(i18n.Locale()).OvSettings() }
+
+// OvSettings says "Project settings"
+// in the language of msgs.
+//
+// Button opening the project settings page.
+func (msgs Messages) OvSettings() string {
+	return Catalog.Format(msgs.locale, "ovSettings", nil)
+}
+
+// OvRemove says "Remove from workspace"
+// in the language the app shows.
+//
+// Button removing the project from the workspace (files stay on disk).
+func OvRemove() string { return In(i18n.Locale()).OvRemove() }
+
+// OvRemove says "Remove from workspace"
+// in the language of msgs.
+//
+// Button removing the project from the workspace (files stay on disk).
+func (msgs Messages) OvRemove() string {
+	return Catalog.Format(msgs.locale, "ovRemove", nil)
+}
+
+// OvRemoveTitle says "Remove “{name}” from the workspace?"
+// in the language the app shows.
+//
+// Title of the remove confirmation.
+func OvRemoveTitle(name string) string { return In(i18n.Locale()).OvRemoveTitle(name) }
+
+// OvRemoveTitle says "Remove “{name}” from the workspace?"
+// in the language of msgs.
+//
+// Title of the remove confirmation.
+func (msgs Messages) OvRemoveTitle(name string) string {
+	return Catalog.Format(msgs.locale, "ovRemoveTitle", map[string]any{"name": name})
+}
+
+// OvRemoveMessage says "The project stays on disk; only its entry in this workspace is removed."
+// in the language the app shows.
+//
+// Message of the remove confirmation.
+func OvRemoveMessage() string { return In(i18n.Locale()).OvRemoveMessage() }
+
+// OvRemoveMessage says "The project stays on disk; only its entry in this workspace is removed."
+// in the language of msgs.
+//
+// Message of the remove confirmation.
+func (msgs Messages) OvRemoveMessage() string {
+	return Catalog.Format(msgs.locale, "ovRemoveMessage", nil)
+}
+
+// OvRemoveConfirm says "Remove"
+// in the language the app shows.
+//
+// Confirm button of the remove confirmation.
+func OvRemoveConfirm() string { return In(i18n.Locale()).OvRemoveConfirm() }
+
+// OvRemoveConfirm says "Remove"
+// in the language of msgs.
+//
+// Confirm button of the remove confirmation.
+func (msgs Messages) OvRemoveConfirm() string {
+	return Catalog.Format(msgs.locale, "ovRemoveConfirm", nil)
+}
+
+// OvProgress says "Current task"
+// in the language the app shows.
+//
+// Heading of the running task section.
+func OvProgress() string { return In(i18n.Locale()).OvProgress() }
+
+// OvProgress says "Current task"
+// in the language of msgs.
+//
+// Heading of the running task section.
+func (msgs Messages) OvProgress() string {
+	return Catalog.Format(msgs.locale, "ovProgress", nil)
+}
+
+// OvCancelJob says "Cancel task"
+// in the language the app shows.
+//
+// Button cancelling the running task of this project.
+func OvCancelJob() string { return In(i18n.Locale()).OvCancelJob() }
+
+// OvCancelJob says "Cancel task"
+// in the language of msgs.
+//
+// Button cancelling the running task of this project.
+func (msgs Messages) OvCancelJob() string {
+	return Catalog.Format(msgs.locale, "ovCancelJob", nil)
+}
+
+// OvQueued says "{count, plural, one {# task queued} other {# tasks queued}}"
+// in the language the app shows.
+//
+// Number of queued tasks of this project.
+func OvQueued(count int) string { return In(i18n.Locale()).OvQueued(count) }
+
+// OvQueued says "{count, plural, one {# task queued} other {# tasks queued}}"
+// in the language of msgs.
+//
+// Number of queued tasks of this project.
+func (msgs Messages) OvQueued(count int) string {
+	return Catalog.Format(msgs.locale, "ovQueued", map[string]any{"count": count})
+}
+
+// OvProgressCount says "{done} / {total}"
+// in the language the app shows.
+//
+// Progress counter of the running task.
+func OvProgressCount(done int, total int) string {
+	return In(i18n.Locale()).OvProgressCount(done, total)
+}
+
+// OvProgressCount says "{done} / {total}"
+// in the language of msgs.
+//
+// Progress counter of the running task.
+func (msgs Messages) OvProgressCount(done int, total int) string {
+	return Catalog.Format(msgs.locale, "ovProgressCount", map[string]any{"done": done, "total": total})
+}
+
+// OvConcurrency says "Translation concurrency"
+// in the language the app shows.
+//
+// Label of the per-project translation concurrency input.
+func OvConcurrency() string { return In(i18n.Locale()).OvConcurrency() }
+
+// OvConcurrency says "Translation concurrency"
+// in the language of msgs.
+//
+// Label of the per-project translation concurrency input.
+func (msgs Messages) OvConcurrency() string {
+	return Catalog.Format(msgs.locale, "ovConcurrency", nil)
+}
+
+// OvConcurrencyHint says "Batches translated in parallel; 0 uses the project setting."
+// in the language the app shows.
+//
+// Hint next to the concurrency input.
+func OvConcurrencyHint() string { return In(i18n.Locale()).OvConcurrencyHint() }
+
+// OvConcurrencyHint says "Batches translated in parallel; 0 uses the project setting."
+// in the language of msgs.
+//
+// Hint next to the concurrency input.
+func (msgs Messages) OvConcurrencyHint() string {
+	return Catalog.Format(msgs.locale, "ovConcurrencyHint", nil)
+}
+
+// OvLastResult says "Last task"
+// in the language the app shows.
+//
+// Heading of the last finished task summary.
+func OvLastResult() string { return In(i18n.Locale()).OvLastResult() }
+
+// OvLastResult says "Last task"
+// in the language of msgs.
+//
+// Heading of the last finished task summary.
+func (msgs Messages) OvLastResult() string {
+	return Catalog.Format(msgs.locale, "ovLastResult", nil)
+}
+
+// OvScanResult says "Scan finished: {total} comments, {added} added, {migrated} migrated."
+// in the language the app shows.
+//
+// Summary of a finished scan.
+func OvScanResult(total int, added int, migrated int) string {
+	return In(i18n.Locale()).OvScanResult(total, added, migrated)
+}
+
+// OvScanResult says "Scan finished: {total} comments, {added} added, {migrated} migrated."
+// in the language of msgs.
+//
+// Summary of a finished scan.
+func (msgs Messages) OvScanResult(total int, added int, migrated int) string {
+	return Catalog.Format(msgs.locale, "ovScanResult", map[string]any{"total": total, "added": added, "migrated": migrated})
+}
+
+// OvUnchanged says "Nothing changed since the last scan."
+// in the language the app shows.
+//
+// Summary of a scan that found no changes.
+func OvUnchanged() string { return In(i18n.Locale()).OvUnchanged() }
+
+// OvUnchanged says "Nothing changed since the last scan."
+// in the language of msgs.
+//
+// Summary of a scan that found no changes.
+func (msgs Messages) OvUnchanged() string {
+	return Catalog.Format(msgs.locale, "ovUnchanged", nil)
+}
+
+// OvOrphans says "{count, plural, one {# orphaned entry can be pruned.} other {# orphaned entries can be pruned.}}"
+// in the language the app shows.
+//
+// Shown after a scan that found orphaned mapping entries.
+func OvOrphans(count int) string { return In(i18n.Locale()).OvOrphans(count) }
+
+// OvOrphans says "{count, plural, one {# orphaned entry can be pruned.} other {# orphaned entries can be pruned.}}"
+// in the language of msgs.
+//
+// Shown after a scan that found orphaned mapping entries.
+func (msgs Messages) OvOrphans(count int) string {
+	return Catalog.Format(msgs.locale, "ovOrphans", map[string]any{"count": count})
+}
+
+// OvPruneResult says "{count, plural, =0 {No orphaned entries to prune.} one {Pruned # orphaned entry.} other {Pruned # orphaned entries.}}"
+// in the language the app shows.
+//
+// Summary of a finished prune.
+func OvPruneResult(count int) string { return In(i18n.Locale()).OvPruneResult(count) }
+
+// OvPruneResult says "{count, plural, =0 {No orphaned entries to prune.} one {Pruned # orphaned entry.} other {Pruned # orphaned entries.}}"
+// in the language of msgs.
+//
+// Summary of a finished prune.
+func (msgs Messages) OvPruneResult(count int) string {
+	return Catalog.Format(msgs.locale, "ovPruneResult", map[string]any{"count": count})
+}
+
+// OvFileErrors says "{count, plural, one {# file could not be parsed.} other {# files could not be parsed.}}"
+// in the language the app shows.
+//
+// Files skipped by the scan because they failed to parse.
+func OvFileErrors(count int) string { return In(i18n.Locale()).OvFileErrors(count) }
+
+// OvFileErrors says "{count, plural, one {# file could not be parsed.} other {# files could not be parsed.}}"
+// in the language of msgs.
+//
+// Files skipped by the scan because they failed to parse.
+func (msgs Messages) OvFileErrors(count int) string {
+	return Catalog.Format(msgs.locale, "ovFileErrors", map[string]any{"count": count})
+}
+
+// OvTranslateResult says "Translation finished: {success} succeeded, {fail} failed of {total}."
+// in the language the app shows.
+//
+// Summary of a finished translation.
+func OvTranslateResult(success int, fail int, total int) string {
+	return In(i18n.Locale()).OvTranslateResult(success, fail, total)
+}
+
+// OvTranslateResult says "Translation finished: {success} succeeded, {fail} failed of {total}."
+// in the language of msgs.
+//
+// Summary of a finished translation.
+func (msgs Messages) OvTranslateResult(success int, fail int, total int) string {
+	return Catalog.Format(msgs.locale, "ovTranslateResult", map[string]any{"success": success, "fail": fail, "total": total})
+}
+
+// OvJobCanceled says "{kind} was canceled; finished work is saved."
+// in the language the app shows.
+//
+// Summary of a canceled task; kind is a task kind label.
+func OvJobCanceled(kind string) string { return In(i18n.Locale()).OvJobCanceled(kind) }
+
+// OvJobCanceled says "{kind} was canceled; finished work is saved."
+// in the language of msgs.
+//
+// Summary of a canceled task; kind is a task kind label.
+func (msgs Messages) OvJobCanceled(kind string) string {
+	return Catalog.Format(msgs.locale, "ovJobCanceled", map[string]any{"kind": kind})
+}
+
+// OvJobFailed says "{kind} failed: {error}"
+// in the language the app shows.
+//
+// Summary of a failed task; error is already redacted.
+func OvJobFailed(kind string, error string) string { return In(i18n.Locale()).OvJobFailed(kind, error) }
+
+// OvJobFailed says "{kind} failed: {error}"
+// in the language of msgs.
+//
+// Summary of a failed task; error is already redacted.
+func (msgs Messages) OvJobFailed(kind string, error string) string {
+	return Catalog.Format(msgs.locale, "ovJobFailed", map[string]any{"kind": kind, "error": error})
+}
+
+// TaskKindScan says "Scan"
+// in the language the app shows.
+//
+// Task kind: scan / extract comments.
+func TaskKindScan() string { return In(i18n.Locale()).TaskKindScan() }
+
+// TaskKindScan says "Scan"
+// in the language of msgs.
+//
+// Task kind: scan / extract comments.
+func (msgs Messages) TaskKindScan() string {
+	return Catalog.Format(msgs.locale, "taskKindScan", nil)
+}
+
+// TaskKindTranslate says "Translate"
+// in the language the app shows.
+//
+// Task kind: translate missing comments.
+func TaskKindTranslate() string { return In(i18n.Locale()).TaskKindTranslate() }
+
+// TaskKindTranslate says "Translate"
+// in the language of msgs.
+//
+// Task kind: translate missing comments.
+func (msgs Messages) TaskKindTranslate() string {
+	return Catalog.Format(msgs.locale, "taskKindTranslate", nil)
+}
+
+// TaskKindPrune says "Prune orphans"
+// in the language the app shows.
+//
+// Task kind: prune orphaned entries.
+func TaskKindPrune() string { return In(i18n.Locale()).TaskKindPrune() }
+
+// TaskKindPrune says "Prune orphans"
+// in the language of msgs.
+//
+// Task kind: prune orphaned entries.
+func (msgs Messages) TaskKindPrune() string {
+	return Catalog.Format(msgs.locale, "taskKindPrune", nil)
+}
+
+// TaskKindRetry says "Retry failed"
+// in the language the app shows.
+//
+// Task kind: retry failed translations.
+func TaskKindRetry() string { return In(i18n.Locale()).TaskKindRetry() }
+
+// TaskKindRetry says "Retry failed"
+// in the language of msgs.
+//
+// Task kind: retry failed translations.
+func (msgs Messages) TaskKindRetry() string {
+	return Catalog.Format(msgs.locale, "taskKindRetry", nil)
+}
+
+// TaskStateQueued says "Queued"
+// in the language the app shows.
+//
+// Task state.
+func TaskStateQueued() string { return In(i18n.Locale()).TaskStateQueued() }
+
+// TaskStateQueued says "Queued"
+// in the language of msgs.
+//
+// Task state.
+func (msgs Messages) TaskStateQueued() string {
+	return Catalog.Format(msgs.locale, "taskStateQueued", nil)
+}
+
+// TaskStateRunning says "Running"
+// in the language the app shows.
+//
+// Task state.
+func TaskStateRunning() string { return In(i18n.Locale()).TaskStateRunning() }
+
+// TaskStateRunning says "Running"
+// in the language of msgs.
+//
+// Task state.
+func (msgs Messages) TaskStateRunning() string {
+	return Catalog.Format(msgs.locale, "taskStateRunning", nil)
+}
+
+// TaskStateDone says "Done"
+// in the language the app shows.
+//
+// Task state.
+func TaskStateDone() string { return In(i18n.Locale()).TaskStateDone() }
+
+// TaskStateDone says "Done"
+// in the language of msgs.
+//
+// Task state.
+func (msgs Messages) TaskStateDone() string {
+	return Catalog.Format(msgs.locale, "taskStateDone", nil)
+}
+
+// TaskStateFailed says "Failed"
+// in the language the app shows.
+//
+// Task state.
+func TaskStateFailed() string { return In(i18n.Locale()).TaskStateFailed() }
+
+// TaskStateFailed says "Failed"
+// in the language of msgs.
+//
+// Task state.
+func (msgs Messages) TaskStateFailed() string {
+	return Catalog.Format(msgs.locale, "taskStateFailed", nil)
+}
+
+// TaskStateCanceled says "Canceled"
+// in the language the app shows.
+//
+// Task state.
+func TaskStateCanceled() string { return In(i18n.Locale()).TaskStateCanceled() }
+
+// TaskStateCanceled says "Canceled"
+// in the language of msgs.
+//
+// Task state.
+func (msgs Messages) TaskStateCanceled() string {
+	return Catalog.Format(msgs.locale, "taskStateCanceled", nil)
+}
+
+// TaskPhaseStarting says "Starting…"
+// in the language the app shows.
+//
+// Progress phase before the first event arrives.
+func TaskPhaseStarting() string { return In(i18n.Locale()).TaskPhaseStarting() }
+
+// TaskPhaseStarting says "Starting…"
+// in the language of msgs.
+//
+// Progress phase before the first event arrives.
+func (msgs Messages) TaskPhaseStarting() string {
+	return Catalog.Format(msgs.locale, "taskPhaseStarting", nil)
+}
+
+// TaskPhaseDiscover says "Finding files"
+// in the language the app shows.
+//
+// Progress phase: enumerating files to scan.
+func TaskPhaseDiscover() string { return In(i18n.Locale()).TaskPhaseDiscover() }
+
+// TaskPhaseDiscover says "Finding files"
+// in the language of msgs.
+//
+// Progress phase: enumerating files to scan.
+func (msgs Messages) TaskPhaseDiscover() string {
+	return Catalog.Format(msgs.locale, "taskPhaseDiscover", nil)
+}
+
+// TaskPhaseScan says "Scanning files"
+// in the language the app shows.
+//
+// Progress phase: parsing files and extracting comments.
+func TaskPhaseScan() string { return In(i18n.Locale()).TaskPhaseScan() }
+
+// TaskPhaseScan says "Scanning files"
+// in the language of msgs.
+//
+// Progress phase: parsing files and extracting comments.
+func (msgs Messages) TaskPhaseScan() string {
+	return Catalog.Format(msgs.locale, "taskPhaseScan", nil)
+}
+
+// TaskPhaseMap says "Updating mappings"
+// in the language the app shows.
+//
+// Progress phase: merging comments into the mappings.
+func TaskPhaseMap() string { return In(i18n.Locale()).TaskPhaseMap() }
+
+// TaskPhaseMap says "Updating mappings"
+// in the language of msgs.
+//
+// Progress phase: merging comments into the mappings.
+func (msgs Messages) TaskPhaseMap() string {
+	return Catalog.Format(msgs.locale, "taskPhaseMap", nil)
+}
+
+// TaskPhaseIndex says "Writing index"
+// in the language the app shows.
+//
+// Progress phase: writing the location index.
+func TaskPhaseIndex() string { return In(i18n.Locale()).TaskPhaseIndex() }
+
+// TaskPhaseIndex says "Writing index"
+// in the language of msgs.
+//
+// Progress phase: writing the location index.
+func (msgs Messages) TaskPhaseIndex() string {
+	return Catalog.Format(msgs.locale, "taskPhaseIndex", nil)
+}
+
+// TaskPhaseTranslate says "Translating"
+// in the language the app shows.
+//
+// Progress phase: calling the translation provider.
+func TaskPhaseTranslate() string { return In(i18n.Locale()).TaskPhaseTranslate() }
+
+// TaskPhaseTranslate says "Translating"
+// in the language of msgs.
+//
+// Progress phase: calling the translation provider.
+func (msgs Messages) TaskPhaseTranslate() string {
+	return Catalog.Format(msgs.locale, "taskPhaseTranslate", nil)
+}
+
+// TaskPhaseSave says "Saving"
+// in the language the app shows.
+//
+// Progress phase: writing results to disk.
+func TaskPhaseSave() string { return In(i18n.Locale()).TaskPhaseSave() }
+
+// TaskPhaseSave says "Saving"
+// in the language of msgs.
+//
+// Progress phase: writing results to disk.
+func (msgs Messages) TaskPhaseSave() string {
+	return Catalog.Format(msgs.locale, "taskPhaseSave", nil)
+}
+
+// TaskPhaseConvert says "Rewriting sources"
+// in the language the app shows.
+//
+// Progress phase: rewriting source files.
+func TaskPhaseConvert() string { return In(i18n.Locale()).TaskPhaseConvert() }
+
+// TaskPhaseConvert says "Rewriting sources"
+// in the language of msgs.
+//
+// Progress phase: rewriting source files.
+func (msgs Messages) TaskPhaseConvert() string {
+	return Catalog.Format(msgs.locale, "taskPhaseConvert", nil)
+}
+
+// TaskPhaseDone says "Finishing"
+// in the language the app shows.
+//
+// Progress phase: done.
+func TaskPhaseDone() string { return In(i18n.Locale()).TaskPhaseDone() }
+
+// TaskPhaseDone says "Finishing"
+// in the language of msgs.
+//
+// Progress phase: done.
+func (msgs Messages) TaskPhaseDone() string {
+	return Catalog.Format(msgs.locale, "taskPhaseDone", nil)
+}
+
+// TaskTitle says "Batch tasks"
+// in the language the app shows.
+//
+// Title of the tasks page.
+func TaskTitle() string { return In(i18n.Locale()).TaskTitle() }
+
+// TaskTitle says "Batch tasks"
+// in the language of msgs.
+//
+// Title of the tasks page.
+func (msgs Messages) TaskTitle() string {
+	return Catalog.Format(msgs.locale, "taskTitle", nil)
+}
+
+// TaskHint says "Check projects, then queue the same task for all of them."
+// in the language the app shows.
+//
+// Hint under the tasks page title.
+func TaskHint() string { return In(i18n.Locale()).TaskHint() }
+
+// TaskHint says "Check projects, then queue the same task for all of them."
+// in the language of msgs.
+//
+// Hint under the tasks page title.
+func (msgs Messages) TaskHint() string {
+	return Catalog.Format(msgs.locale, "taskHint", nil)
+}
+
+// TaskSelectAll says "All projects"
+// in the language the app shows.
+//
+// Checkbox checking or unchecking every project.
+func TaskSelectAll() string { return In(i18n.Locale()).TaskSelectAll() }
+
+// TaskSelectAll says "All projects"
+// in the language of msgs.
+//
+// Checkbox checking or unchecking every project.
+func (msgs Messages) TaskSelectAll() string {
+	return Catalog.Format(msgs.locale, "taskSelectAll", nil)
+}
+
+// TaskSelectProject says "Select {name}"
+// in the language the app shows.
+//
+// Accessible name of a project's checkbox.
+func TaskSelectProject(name string) string { return In(i18n.Locale()).TaskSelectProject(name) }
+
+// TaskSelectProject says "Select {name}"
+// in the language of msgs.
+//
+// Accessible name of a project's checkbox.
+func (msgs Messages) TaskSelectProject(name string) string {
+	return Catalog.Format(msgs.locale, "taskSelectProject", map[string]any{"name": name})
+}
+
+// TaskScanSelected says "Scan selected"
+// in the language the app shows.
+//
+// Button queueing a scan for every checked project.
+func TaskScanSelected() string { return In(i18n.Locale()).TaskScanSelected() }
+
+// TaskScanSelected says "Scan selected"
+// in the language of msgs.
+//
+// Button queueing a scan for every checked project.
+func (msgs Messages) TaskScanSelected() string {
+	return Catalog.Format(msgs.locale, "taskScanSelected", nil)
+}
+
+// TaskTranslateSelected says "Translate selected"
+// in the language the app shows.
+//
+// Button queueing a translation for every checked project.
+func TaskTranslateSelected() string { return In(i18n.Locale()).TaskTranslateSelected() }
+
+// TaskTranslateSelected says "Translate selected"
+// in the language of msgs.
+//
+// Button queueing a translation for every checked project.
+func (msgs Messages) TaskTranslateSelected() string {
+	return Catalog.Format(msgs.locale, "taskTranslateSelected", nil)
+}
+
+// TaskCancelAll says "Cancel all"
+// in the language the app shows.
+//
+// Button cancelling every queued and running task.
+func TaskCancelAll() string { return In(i18n.Locale()).TaskCancelAll() }
+
+// TaskCancelAll says "Cancel all"
+// in the language of msgs.
+//
+// Button cancelling every queued and running task.
+func (msgs Messages) TaskCancelAll() string {
+	return Catalog.Format(msgs.locale, "taskCancelAll", nil)
+}
+
+// TaskClearFinished says "Clear finished"
+// in the language the app shows.
+//
+// Button removing finished tasks from the list.
+func TaskClearFinished() string { return In(i18n.Locale()).TaskClearFinished() }
+
+// TaskClearFinished says "Clear finished"
+// in the language of msgs.
+//
+// Button removing finished tasks from the list.
+func (msgs Messages) TaskClearFinished() string {
+	return Catalog.Format(msgs.locale, "taskClearFinished", nil)
+}
+
+// TaskParallel says "Projects in parallel"
+// in the language the app shows.
+//
+// Label of the global parallel-limit input.
+func TaskParallel() string { return In(i18n.Locale()).TaskParallel() }
+
+// TaskParallel says "Projects in parallel"
+// in the language of msgs.
+//
+// Label of the global parallel-limit input.
+func (msgs Messages) TaskParallel() string {
+	return Catalog.Format(msgs.locale, "taskParallel", nil)
+}
+
+// TaskParallelHint says "1 runs the projects one after another."
+// in the language the app shows.
+//
+// Hint next to the parallel-limit input.
+func TaskParallelHint() string { return In(i18n.Locale()).TaskParallelHint() }
+
+// TaskParallelHint says "1 runs the projects one after another."
+// in the language of msgs.
+//
+// Hint next to the parallel-limit input.
+func (msgs Messages) TaskParallelHint() string {
+	return Catalog.Format(msgs.locale, "taskParallelHint", nil)
+}
+
+// TaskJobs says "Tasks"
+// in the language the app shows.
+//
+// Heading of the task list.
+func TaskJobs() string { return In(i18n.Locale()).TaskJobs() }
+
+// TaskJobs says "Tasks"
+// in the language of msgs.
+//
+// Heading of the task list.
+func (msgs Messages) TaskJobs() string {
+	return Catalog.Format(msgs.locale, "taskJobs", nil)
+}
+
+// TaskNoJobs says "No tasks yet."
+// in the language the app shows.
+//
+// Empty task list.
+func TaskNoJobs() string { return In(i18n.Locale()).TaskNoJobs() }
+
+// TaskNoJobs says "No tasks yet."
+// in the language of msgs.
+//
+// Empty task list.
+func (msgs Messages) TaskNoJobs() string {
+	return Catalog.Format(msgs.locale, "taskNoJobs", nil)
+}
+
+// TaskNoProjects says "Add projects to run batch tasks."
+// in the language the app shows.
+//
+// Tasks page without projects.
+func TaskNoProjects() string { return In(i18n.Locale()).TaskNoProjects() }
+
+// TaskNoProjects says "Add projects to run batch tasks."
+// in the language of msgs.
+//
+// Tasks page without projects.
+func (msgs Messages) TaskNoProjects() string {
+	return Catalog.Format(msgs.locale, "taskNoProjects", nil)
+}
+
+// TaskCancelJob says "Cancel"
+// in the language the app shows.
+//
+// Button cancelling one task in the list.
+func TaskCancelJob() string { return In(i18n.Locale()).TaskCancelJob() }
+
+// TaskCancelJob says "Cancel"
+// in the language of msgs.
+//
+// Button cancelling one task in the list.
+func (msgs Messages) TaskCancelJob() string {
+	return Catalog.Format(msgs.locale, "taskCancelJob", nil)
+}
+
+// TaskSummary says "{active} active · {total} in the list"
+// in the language the app shows.
+//
+// Counter above the task list.
+func TaskSummary(active int, total int) string { return In(i18n.Locale()).TaskSummary(active, total) }
+
+// TaskSummary says "{active} active · {total} in the list"
+// in the language of msgs.
+//
+// Counter above the task list.
+func (msgs Messages) TaskSummary(active int, total int) string {
+	return Catalog.Format(msgs.locale, "taskSummary", map[string]any{"active": active, "total": total})
+}
+
+// WizTitle says "Initialize project"
+// in the language the app shows.
+//
+// Title of the initialization wizard.
+func WizTitle() string { return In(i18n.Locale()).WizTitle() }
+
+// WizTitle says "Initialize project"
+// in the language of msgs.
+//
+// Title of the initialization wizard.
+func (msgs Messages) WizTitle() string {
+	return Catalog.Format(msgs.locale, "wizTitle", nil)
+}
+
+// WizIntro says "Codei18n stores its configuration and cache in a .codei18n folder in this project."
+// in the language the app shows.
+//
+// Intro of the wizard.
+func WizIntro() string { return In(i18n.Locale()).WizIntro() }
+
+// WizIntro says "Codei18n stores its configuration and cache in a .codei18n folder in this project."
+// in the language of msgs.
+//
+// Intro of the wizard.
+func (msgs Messages) WizIntro() string {
+	return Catalog.Format(msgs.locale, "wizIntro", nil)
+}
+
+// WizSourceLanguage says "Source language"
+// in the language the app shows.
+//
+// Wizard field: the language comments are written in.
+func WizSourceLanguage() string { return In(i18n.Locale()).WizSourceLanguage() }
+
+// WizSourceLanguage says "Source language"
+// in the language of msgs.
+//
+// Wizard field: the language comments are written in.
+func (msgs Messages) WizSourceLanguage() string {
+	return Catalog.Format(msgs.locale, "wizSourceLanguage", nil)
+}
+
+// WizSourceLanguageHint says "Language the comments are written in, as a BCP 47 code such as en."
+// in the language the app shows.
+//
+// Hint of the source language field.
+func WizSourceLanguageHint() string { return In(i18n.Locale()).WizSourceLanguageHint() }
+
+// WizSourceLanguageHint says "Language the comments are written in, as a BCP 47 code such as en."
+// in the language of msgs.
+//
+// Hint of the source language field.
+func (msgs Messages) WizSourceLanguageHint() string {
+	return Catalog.Format(msgs.locale, "wizSourceLanguageHint", nil)
+}
+
+// WizLocalLanguage says "Local language"
+// in the language the app shows.
+//
+// Wizard field: the language to read comments in.
+func WizLocalLanguage() string { return In(i18n.Locale()).WizLocalLanguage() }
+
+// WizLocalLanguage says "Local language"
+// in the language of msgs.
+//
+// Wizard field: the language to read comments in.
+func (msgs Messages) WizLocalLanguage() string {
+	return Catalog.Format(msgs.locale, "wizLocalLanguage", nil)
+}
+
+// WizLocalLanguageHint says "Language you want to read the comments in, such as zh-CN."
+// in the language the app shows.
+//
+// Hint of the local language field.
+func WizLocalLanguageHint() string { return In(i18n.Locale()).WizLocalLanguageHint() }
+
+// WizLocalLanguageHint says "Language you want to read the comments in, such as zh-CN."
+// in the language of msgs.
+//
+// Hint of the local language field.
+func (msgs Messages) WizLocalLanguageHint() string {
+	return Catalog.Format(msgs.locale, "wizLocalLanguageHint", nil)
+}
+
+// WizExcludes says "Exclude rules"
+// in the language the app shows.
+//
+// Wizard field: glob patterns excluded from scanning.
+func WizExcludes() string { return In(i18n.Locale()).WizExcludes() }
+
+// WizExcludes says "Exclude rules"
+// in the language of msgs.
+//
+// Wizard field: glob patterns excluded from scanning.
+func (msgs Messages) WizExcludes() string {
+	return Catalog.Format(msgs.locale, "wizExcludes", nil)
+}
+
+// WizExcludesHint says "One glob per line; matching files are not scanned."
+// in the language the app shows.
+//
+// Hint of the exclude rules field.
+func WizExcludesHint() string { return In(i18n.Locale()).WizExcludesHint() }
+
+// WizExcludesHint says "One glob per line; matching files are not scanned."
+// in the language of msgs.
+//
+// Hint of the exclude rules field.
+func (msgs Messages) WizExcludesHint() string {
+	return Catalog.Format(msgs.locale, "wizExcludesHint", nil)
+}
+
+// WizProfile says "Provider profile"
+// in the language the app shows.
+//
+// Wizard field: the translation provider profile.
+func WizProfile() string { return In(i18n.Locale()).WizProfile() }
+
+// WizProfile says "Provider profile"
+// in the language of msgs.
+//
+// Wizard field: the translation provider profile.
+func (msgs Messages) WizProfile() string {
+	return Catalog.Format(msgs.locale, "wizProfile", nil)
+}
+
+// WizProfileNone says "Global default"
+// in the language the app shows.
+//
+// Profile choice meaning: use the global default profile.
+func WizProfileNone() string { return In(i18n.Locale()).WizProfileNone() }
+
+// WizProfileNone says "Global default"
+// in the language of msgs.
+//
+// Profile choice meaning: use the global default profile.
+func (msgs Messages) WizProfileNone() string {
+	return Catalog.Format(msgs.locale, "wizProfileNone", nil)
+}
+
+// WizProfileHint says "Profiles and their tokens are managed in Settings."
+// in the language the app shows.
+//
+// Hint of the provider profile field.
+func WizProfileHint() string { return In(i18n.Locale()).WizProfileHint() }
+
+// WizProfileHint says "Profiles and their tokens are managed in Settings."
+// in the language of msgs.
+//
+// Hint of the provider profile field.
+func (msgs Messages) WizProfileHint() string {
+	return Catalog.Format(msgs.locale, "wizProfileHint", nil)
+}
+
+// WizInstallHooks says "Install the git hook"
+// in the language the app shows.
+//
+// Wizard checkbox: install the pre-commit hook.
+func WizInstallHooks() string { return In(i18n.Locale()).WizInstallHooks() }
+
+// WizInstallHooks says "Install the git hook"
+// in the language of msgs.
+//
+// Wizard checkbox: install the pre-commit hook.
+func (msgs Messages) WizInstallHooks() string {
+	return Catalog.Format(msgs.locale, "wizInstallHooks", nil)
+}
+
+// WizGitignore says "Add Codei18n cache files to .gitignore"
+// in the language the app shows.
+//
+// Wizard checkbox: update .gitignore.
+func WizGitignore() string { return In(i18n.Locale()).WizGitignore() }
+
+// WizGitignore says "Add Codei18n cache files to .gitignore"
+// in the language of msgs.
+//
+// Wizard checkbox: update .gitignore.
+func (msgs Messages) WizGitignore() string {
+	return Catalog.Format(msgs.locale, "wizGitignore", nil)
+}
+
+// WizNotGit says "Not a git repository: the git hook and .gitignore options are unavailable."
+// in the language the app shows.
+//
+// Shown instead of the git options.
+func WizNotGit() string { return In(i18n.Locale()).WizNotGit() }
+
+// WizNotGit says "Not a git repository: the git hook and .gitignore options are unavailable."
+// in the language of msgs.
+//
+// Shown instead of the git options.
+func (msgs Messages) WizNotGit() string {
+	return Catalog.Format(msgs.locale, "wizNotGit", nil)
+}
+
+// WizScanAfter says "Scan right after initializing"
+// in the language the app shows.
+//
+// Wizard checkbox: queue a first scan.
+func WizScanAfter() string { return In(i18n.Locale()).WizScanAfter() }
+
+// WizScanAfter says "Scan right after initializing"
+// in the language of msgs.
+//
+// Wizard checkbox: queue a first scan.
+func (msgs Messages) WizScanAfter() string {
+	return Catalog.Format(msgs.locale, "wizScanAfter", nil)
+}
+
+// WizInitialize says "Initialize"
+// in the language the app shows.
+//
+// Wizard submit button.
+func WizInitialize() string { return In(i18n.Locale()).WizInitialize() }
+
+// WizInitialize says "Initialize"
+// in the language of msgs.
+//
+// Wizard submit button.
+func (msgs Messages) WizInitialize() string {
+	return Catalog.Format(msgs.locale, "wizInitialize", nil)
+}
+
+// BrTitle says "Comments in {name}"
+// in the language the app shows.
+//
+// Title of the comment browser.
+func BrTitle(name string) string { return In(i18n.Locale()).BrTitle(name) }
+
+// BrTitle says "Comments in {name}"
+// in the language of msgs.
+//
+// Title of the comment browser.
+func (msgs Messages) BrTitle(name string) string {
+	return Catalog.Format(msgs.locale, "brTitle", map[string]any{"name": name})
+}
+
+// BrBack says "Back to overview"
+// in the language the app shows.
+//
+// Button returning to the project overview.
+func BrBack() string { return In(i18n.Locale()).BrBack() }
+
+// BrBack says "Back to overview"
+// in the language of msgs.
+//
+// Button returning to the project overview.
+func (msgs Messages) BrBack() string {
+	return Catalog.Format(msgs.locale, "brBack", nil)
+}
+
+// BrReload says "Reload"
+// in the language the app shows.
+//
+// Button reloading the comments from disk.
+func BrReload() string { return In(i18n.Locale()).BrReload() }
+
+// BrReload says "Reload"
+// in the language of msgs.
+//
+// Button reloading the comments from disk.
+func (msgs Messages) BrReload() string {
+	return Catalog.Format(msgs.locale, "brReload", nil)
+}
+
+// BrLoading says "Loading comments…"
+// in the language the app shows.
+//
+// Shown while comments load.
+func BrLoading() string { return In(i18n.Locale()).BrLoading() }
+
+// BrLoading says "Loading comments…"
+// in the language of msgs.
+//
+// Shown while comments load.
+func (msgs Messages) BrLoading() string {
+	return Catalog.Format(msgs.locale, "brLoading", nil)
+}
+
+// BrSummary says "{total} comments · {translated} translated · {percent}% coverage"
+// in the language the app shows.
+//
+// Top statistics of the comment browser.
+func BrSummary(total int, translated int, percent int) string {
+	return In(i18n.Locale()).BrSummary(total, translated, percent)
+}
+
+// BrSummary says "{total} comments · {translated} translated · {percent}% coverage"
+// in the language of msgs.
+//
+// Top statistics of the comment browser.
+func (msgs Messages) BrSummary(total int, translated int, percent int) string {
+	return Catalog.Format(msgs.locale, "brSummary", map[string]any{"total": total, "translated": translated, "percent": percent})
+}
+
+// BrLangShare says "{lang} {percent}%"
+// in the language the app shows.
+//
+// Share of one source language; lang is a language code.
+func BrLangShare(lang string, percent int) string {
+	return In(i18n.Locale()).BrLangShare(lang, percent)
+}
+
+// BrLangShare says "{lang} {percent}%"
+// in the language of msgs.
+//
+// Share of one source language; lang is a language code.
+func (msgs Messages) BrLangShare(lang string, percent int) string {
+	return Catalog.Format(msgs.locale, "brLangShare", map[string]any{"lang": lang, "percent": percent})
+}
+
+// BrLangUnknown says "unknown"
+// in the language the app shows.
+//
+// Source language not detected.
+func BrLangUnknown() string { return In(i18n.Locale()).BrLangUnknown() }
+
+// BrLangUnknown says "unknown"
+// in the language of msgs.
+//
+// Source language not detected.
+func (msgs Messages) BrLangUnknown() string {
+	return Catalog.Format(msgs.locale, "brLangUnknown", nil)
+}
+
+// BrFilterFile says "File contains…"
+// in the language the app shows.
+//
+// Placeholder and name of the file path filter.
+func BrFilterFile() string { return In(i18n.Locale()).BrFilterFile() }
+
+// BrFilterFile says "File contains…"
+// in the language of msgs.
+//
+// Placeholder and name of the file path filter.
+func (msgs Messages) BrFilterFile() string {
+	return Catalog.Format(msgs.locale, "brFilterFile", nil)
+}
+
+// BrLanguage says "Programming language"
+// in the language the app shows.
+//
+// Name of the programming language filter.
+func BrLanguage() string { return In(i18n.Locale()).BrLanguage() }
+
+// BrLanguage says "Programming language"
+// in the language of msgs.
+//
+// Name of the programming language filter.
+func (msgs Messages) BrLanguage() string {
+	return Catalog.Format(msgs.locale, "brLanguage", nil)
+}
+
+// BrAllLanguages says "All programming languages"
+// in the language the app shows.
+//
+// Programming language filter: no filtering.
+func BrAllLanguages() string { return In(i18n.Locale()).BrAllLanguages() }
+
+// BrAllLanguages says "All programming languages"
+// in the language of msgs.
+//
+// Programming language filter: no filtering.
+func (msgs Messages) BrAllLanguages() string {
+	return Catalog.Format(msgs.locale, "brAllLanguages", nil)
+}
+
+// BrLang says "Source language"
+// in the language the app shows.
+//
+// Name of the source language filter.
+func BrLang() string { return In(i18n.Locale()).BrLang() }
+
+// BrLang says "Source language"
+// in the language of msgs.
+//
+// Name of the source language filter.
+func (msgs Messages) BrLang() string {
+	return Catalog.Format(msgs.locale, "brLang", nil)
+}
+
+// BrAllLangs says "All source languages"
+// in the language the app shows.
+//
+// Source language filter: no filtering.
+func BrAllLangs() string { return In(i18n.Locale()).BrAllLangs() }
+
+// BrAllLangs says "All source languages"
+// in the language of msgs.
+//
+// Source language filter: no filtering.
+func (msgs Messages) BrAllLangs() string {
+	return Catalog.Format(msgs.locale, "brAllLangs", nil)
+}
+
+// BrTriAll says "All"
+// in the language the app shows.
+//
+// Tri-state filter choice: no filtering.
+func BrTriAll() string { return In(i18n.Locale()).BrTriAll() }
+
+// BrTriAll says "All"
+// in the language of msgs.
+//
+// Tri-state filter choice: no filtering.
+func (msgs Messages) BrTriAll() string {
+	return Catalog.Format(msgs.locale, "brTriAll", nil)
+}
+
+// BrTranslatedYes says "Translated"
+// in the language the app shows.
+//
+// Translation filter choice.
+func BrTranslatedYes() string { return In(i18n.Locale()).BrTranslatedYes() }
+
+// BrTranslatedYes says "Translated"
+// in the language of msgs.
+//
+// Translation filter choice.
+func (msgs Messages) BrTranslatedYes() string {
+	return Catalog.Format(msgs.locale, "brTranslatedYes", nil)
+}
+
+// BrTranslatedNo says "Untranslated"
+// in the language the app shows.
+//
+// Translation filter choice.
+func BrTranslatedNo() string { return In(i18n.Locale()).BrTranslatedNo() }
+
+// BrTranslatedNo says "Untranslated"
+// in the language of msgs.
+//
+// Translation filter choice.
+func (msgs Messages) BrTranslatedNo() string {
+	return Catalog.Format(msgs.locale, "brTranslatedNo", nil)
+}
+
+// BrTranslatedFilter says "Translation state"
+// in the language the app shows.
+//
+// Name of the translation state filter.
+func BrTranslatedFilter() string { return In(i18n.Locale()).BrTranslatedFilter() }
+
+// BrTranslatedFilter says "Translation state"
+// in the language of msgs.
+//
+// Name of the translation state filter.
+func (msgs Messages) BrTranslatedFilter() string {
+	return Catalog.Format(msgs.locale, "brTranslatedFilter", nil)
+}
+
+// BrFailedYes says "Failed"
+// in the language the app shows.
+//
+// Failure filter choice.
+func BrFailedYes() string { return In(i18n.Locale()).BrFailedYes() }
+
+// BrFailedYes says "Failed"
+// in the language of msgs.
+//
+// Failure filter choice.
+func (msgs Messages) BrFailedYes() string {
+	return Catalog.Format(msgs.locale, "brFailedYes", nil)
+}
+
+// BrFailedNo says "Not failed"
+// in the language the app shows.
+//
+// Failure filter choice.
+func BrFailedNo() string { return In(i18n.Locale()).BrFailedNo() }
+
+// BrFailedNo says "Not failed"
+// in the language of msgs.
+//
+// Failure filter choice.
+func (msgs Messages) BrFailedNo() string {
+	return Catalog.Format(msgs.locale, "brFailedNo", nil)
+}
+
+// BrFailedFilter says "Failure state"
+// in the language the app shows.
+//
+// Name of the failure filter.
+func BrFailedFilter() string { return In(i18n.Locale()).BrFailedFilter() }
+
+// BrFailedFilter says "Failure state"
+// in the language of msgs.
+//
+// Name of the failure filter.
+func (msgs Messages) BrFailedFilter() string {
+	return Catalog.Format(msgs.locale, "brFailedFilter", nil)
+}
+
+// BrSearch says "Search comments"
+// in the language the app shows.
+//
+// Name of the full-text search field.
+func BrSearch() string { return In(i18n.Locale()).BrSearch() }
+
+// BrSearch says "Search comments"
+// in the language of msgs.
+//
+// Name of the full-text search field.
+func (msgs Messages) BrSearch() string {
+	return Catalog.Format(msgs.locale, "brSearch", nil)
+}
+
+// BrShown says "{shown} of {total} shown"
+// in the language the app shows.
+//
+// Number of comments matching the filters.
+func BrShown(shown int, total int) string { return In(i18n.Locale()).BrShown(shown, total) }
+
+// BrShown says "{shown} of {total} shown"
+// in the language of msgs.
+//
+// Number of comments matching the filters.
+func (msgs Messages) BrShown(shown int, total int) string {
+	return Catalog.Format(msgs.locale, "brShown", map[string]any{"shown": shown, "total": total})
+}
+
+// BrNoResults says "No comments match the filters."
+// in the language the app shows.
+//
+// Empty filtered list.
+func BrNoResults() string { return In(i18n.Locale()).BrNoResults() }
+
+// BrNoResults says "No comments match the filters."
+// in the language of msgs.
+//
+// Empty filtered list.
+func (msgs Messages) BrNoResults() string {
+	return Catalog.Format(msgs.locale, "brNoResults", nil)
+}
+
+// BrMarkTranslated says "✓"
+// in the language the app shows.
+//
+// Mark of a translated comment in the list.
+func BrMarkTranslated() string { return In(i18n.Locale()).BrMarkTranslated() }
+
+// BrMarkTranslated says "✓"
+// in the language of msgs.
+//
+// Mark of a translated comment in the list.
+func (msgs Messages) BrMarkTranslated() string {
+	return Catalog.Format(msgs.locale, "brMarkTranslated", nil)
+}
+
+// BrMarkFailed says "failed"
+// in the language the app shows.
+//
+// Mark of a comment whose translation failed.
+func BrMarkFailed() string { return In(i18n.Locale()).BrMarkFailed() }
+
+// BrMarkFailed says "failed"
+// in the language of msgs.
+//
+// Mark of a comment whose translation failed.
+func (msgs Messages) BrMarkFailed() string {
+	return Catalog.Format(msgs.locale, "brMarkFailed", nil)
+}
+
+// BrNoSelection says "Select a comment to see and edit its translation."
+// in the language the app shows.
+//
+// Detail pane without a selection.
+func BrNoSelection() string { return In(i18n.Locale()).BrNoSelection() }
+
+// BrNoSelection says "Select a comment to see and edit its translation."
+// in the language of msgs.
+//
+// Detail pane without a selection.
+func (msgs Messages) BrNoSelection() string {
+	return Catalog.Format(msgs.locale, "brNoSelection", nil)
+}
+
+// BrOriginal says "Original"
+// in the language the app shows.
+//
+// Heading of the original comment text.
+func BrOriginal() string { return In(i18n.Locale()).BrOriginal() }
+
+// BrOriginal says "Original"
+// in the language of msgs.
+//
+// Heading of the original comment text.
+func (msgs Messages) BrOriginal() string {
+	return Catalog.Format(msgs.locale, "brOriginal", nil)
+}
+
+// BrTranslation says "Translation ({lang})"
+// in the language the app shows.
+//
+// Heading of the translation editor; lang is a language code.
+func BrTranslation(lang string) string { return In(i18n.Locale()).BrTranslation(lang) }
+
+// BrTranslation says "Translation ({lang})"
+// in the language of msgs.
+//
+// Heading of the translation editor; lang is a language code.
+func (msgs Messages) BrTranslation(lang string) string {
+	return Catalog.Format(msgs.locale, "brTranslation", map[string]any{"lang": lang})
+}
+
+// BrTranslationLabel says "Translation"
+// in the language the app shows.
+//
+// Accessible name of the translation editor.
+func BrTranslationLabel() string { return In(i18n.Locale()).BrTranslationLabel() }
+
+// BrTranslationLabel says "Translation"
+// in the language of msgs.
+//
+// Accessible name of the translation editor.
+func (msgs Messages) BrTranslationLabel() string {
+	return Catalog.Format(msgs.locale, "brTranslationLabel", nil)
+}
+
+// BrSave says "Save translation"
+// in the language the app shows.
+//
+// Button writing the edited translation.
+func BrSave() string { return In(i18n.Locale()).BrSave() }
+
+// BrSave says "Save translation"
+// in the language of msgs.
+//
+// Button writing the edited translation.
+func (msgs Messages) BrSave() string {
+	return Catalog.Format(msgs.locale, "brSave", nil)
+}
+
+// BrMetaFile says "File"
+// in the language the app shows.
+//
+// Metadata label.
+func BrMetaFile() string { return In(i18n.Locale()).BrMetaFile() }
+
+// BrMetaFile says "File"
+// in the language of msgs.
+//
+// Metadata label.
+func (msgs Messages) BrMetaFile() string {
+	return Catalog.Format(msgs.locale, "brMetaFile", nil)
+}
+
+// BrMetaSymbol says "Symbol"
+// in the language the app shows.
+//
+// Metadata label: the code symbol the comment belongs to.
+func BrMetaSymbol() string { return In(i18n.Locale()).BrMetaSymbol() }
+
+// BrMetaSymbol says "Symbol"
+// in the language of msgs.
+//
+// Metadata label: the code symbol the comment belongs to.
+func (msgs Messages) BrMetaSymbol() string {
+	return Catalog.Format(msgs.locale, "brMetaSymbol", nil)
+}
+
+// BrMetaType says "Type"
+// in the language the app shows.
+//
+// Metadata label: the comment type.
+func BrMetaType() string { return In(i18n.Locale()).BrMetaType() }
+
+// BrMetaType says "Type"
+// in the language of msgs.
+//
+// Metadata label: the comment type.
+func (msgs Messages) BrMetaType() string {
+	return Catalog.Format(msgs.locale, "brMetaType", nil)
+}
+
+// BrMetaParts says "Parts"
+// in the language the app shows.
+//
+// Metadata label: number of merged comment parts.
+func BrMetaParts() string { return In(i18n.Locale()).BrMetaParts() }
+
+// BrMetaParts says "Parts"
+// in the language of msgs.
+//
+// Metadata label: number of merged comment parts.
+func (msgs Messages) BrMetaParts() string {
+	return Catalog.Format(msgs.locale, "brMetaParts", nil)
+}
+
+// BrMetaLang says "Detected language"
+// in the language the app shows.
+//
+// Metadata label.
+func BrMetaLang() string { return In(i18n.Locale()).BrMetaLang() }
+
+// BrMetaLang says "Detected language"
+// in the language of msgs.
+//
+// Metadata label.
+func (msgs Messages) BrMetaLang() string {
+	return Catalog.Format(msgs.locale, "brMetaLang", nil)
+}
+
+// BrMetaLangSource says "Detected by"
+// in the language the app shows.
+//
+// Metadata label: how the language was determined.
+func BrMetaLangSource() string { return In(i18n.Locale()).BrMetaLangSource() }
+
+// BrMetaLangSource says "Detected by"
+// in the language of msgs.
+//
+// Metadata label: how the language was determined.
+func (msgs Messages) BrMetaLangSource() string {
+	return Catalog.Format(msgs.locale, "brMetaLangSource", nil)
+}
+
+// BrMetaError says "Last error"
+// in the language the app shows.
+//
+// Metadata label: last translation error.
+func BrMetaError() string { return In(i18n.Locale()).BrMetaError() }
+
+// BrMetaError says "Last error"
+// in the language of msgs.
+//
+// Metadata label: last translation error.
+func (msgs Messages) BrMetaError() string {
+	return Catalog.Format(msgs.locale, "brMetaError", nil)
+}
+
+// BrEmptyValue says "—"
+// in the language the app shows.
+//
+// Placeholder for an empty metadata value.
+func BrEmptyValue() string { return In(i18n.Locale()).BrEmptyValue() }
+
+// BrEmptyValue says "—"
+// in the language of msgs.
+//
+// Placeholder for an empty metadata value.
+func (msgs Messages) BrEmptyValue() string {
+	return Catalog.Format(msgs.locale, "brEmptyValue", nil)
+}
+
+// BrCorrectLanguage says "Correct language"
+// in the language the app shows.
+//
+// Menu button correcting the detected source language.
+func BrCorrectLanguage() string { return In(i18n.Locale()).BrCorrectLanguage() }
+
+// BrCorrectLanguage says "Correct language"
+// in the language of msgs.
+//
+// Menu button correcting the detected source language.
+func (msgs Messages) BrCorrectLanguage() string {
+	return Catalog.Format(msgs.locale, "brCorrectLanguage", nil)
+}
+
+// BrUndoCorrection says "Undo correction"
+// in the language the app shows.
+//
+// Menu item removing a language correction.
+func BrUndoCorrection() string { return In(i18n.Locale()).BrUndoCorrection() }
+
+// BrUndoCorrection says "Undo correction"
+// in the language of msgs.
+//
+// Menu item removing a language correction.
+func (msgs Messages) BrUndoCorrection() string {
+	return Catalog.Format(msgs.locale, "brUndoCorrection", nil)
+}
+
+// BrBusy says "The project is running a task; try again when it finishes."
+// in the language the app shows.
+//
+// Shown when an edit is refused because a task is running.
+func BrBusy() string { return In(i18n.Locale()).BrBusy() }
+
+// BrBusy says "The project is running a task; try again when it finishes."
+// in the language of msgs.
+//
+// Shown when an edit is refused because a task is running.
+func (msgs Messages) BrBusy() string {
+	return Catalog.Format(msgs.locale, "brBusy", nil)
+}

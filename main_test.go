@@ -19,7 +19,9 @@ func (s *fakeShell) Locale() string                       { return "" }
 // 冒烟：空工作区显示引导，点击添加后项目出现在侧栏。
 func TestRootSmoke(t *testing.T) {
 	dir := t.TempDir()
-	a := app.New(app.Deps{Core: app.NewCore(), Update: func(fn func()) { fn() }, DataDir: t.TempDir()})
+	// Update 只排队不执行：后台快速载入的结果不能在后台 goroutine 上直接改状态（否则与视图读取数据竞争）
+	q := make(chan func(), 100)
+	a := app.New(app.Deps{Core: app.NewCore(), Update: func(fn func()) { q <- fn }, DataDir: t.TempDir()})
 	root := &views.Root{App: a, Shell: &fakeShell{picked: []string{dir}}}
 	tt := ui.NewTester(root.View, 1200, 780)
 	if !tt.HasText(locales.EmptyTitle()) {
