@@ -5,7 +5,7 @@ go 1.27.1
 tool github.com/egoist/mygo/cmd/mygo
 
 require (
-	github.com/CairnPack/codei18n v0.0.0-20261018023324-ffa2540c55a7
+	github.com/CairnPack/codei18n v0.2.0
 	github.com/egoist/mygo v0.5.5
 )
 

@@ -1,5 +1,5 @@
-github.com/CairnPack/codei18n v0.0.0-20261018023324-ffa2540c55a7 h1:k8VVJGvjOAMyOI6Ln77dW3Mruso5GwQPnDt3Yfb9zhk=
-github.com/CairnPack/codei18n v0.0.0-20261018023324-ffa2540c55a7/go.mod h1:eCRtTJxvrtRaAtEL9qO/G0w2tSzWTVmklOwufEHHB9w=
+github.com/CairnPack/codei18n v0.2.0 h1:9jUnW+JtEynrUfHhERgzrtoE3LSuBDE4Y0lX5yHv4rc=
+github.com/CairnPack/codei18n v0.2.0/go.mod h1:eCRtTJxvrtRaAtEL9qO/G0w2tSzWTVmklOwufEHHB9w=
 github.com/bmatcuk/doublestar/v4 v4.9.1 h1:X8jg9rRZmJd4yRy7ZeNDRnM+T3ZfHv15JiBJ/avrEXE=
 github.com/bmatcuk/doublestar/v4 v4.9.1/go.mod h1:xBQ8jztBU6kakFMg+8WGxn0c6z1fTSPVIjEY1Wr7jzc=
 github.com/danieljoos/wincred v1.2.3 h1:v7dZC2x32Ut3nEfRH+vhoZGvN72+dQ/snVXo/vMFLdQ=
