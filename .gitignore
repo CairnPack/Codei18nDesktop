@@ -1,0 +1,5 @@
+/build/
+/.mygo/
+mygo_windows_*.syso
+/go.work
+/go.work.sum
