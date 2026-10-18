@@ -297,3 +297,1223 @@ func StateError() string { return In(i18n.Locale()).StateError() }
 func (msgs Messages) StateError() string {
 	return Catalog.Format(msgs.locale, "stateError", nil)
 }
+
+// TokInput says "Enter API token"
+// in the language the app shows.
+//
+// Accessible name of the masked token input.
+func TokInput() string { return In(i18n.Locale()).TokInput() }
+
+// TokInput says "Enter API token"
+// in the language of msgs.
+//
+// Accessible name of the masked token input.
+func (msgs Messages) TokInput() string {
+	return Catalog.Format(msgs.locale, "tokInput", nil)
+}
+
+// TokPlaceholderNew says "Paste a token"
+// in the language the app shows.
+//
+// Placeholder of the token input when no token is saved.
+func TokPlaceholderNew() string { return In(i18n.Locale()).TokPlaceholderNew() }
+
+// TokPlaceholderNew says "Paste a token"
+// in the language of msgs.
+//
+// Placeholder of the token input when no token is saved.
+func (msgs Messages) TokPlaceholderNew() string {
+	return Catalog.Format(msgs.locale, "tokPlaceholderNew", nil)
+}
+
+// TokPlaceholderReplace says "Paste a new token to replace the saved one"
+// in the language the app shows.
+//
+// Placeholder of the token input when a token is already saved.
+func TokPlaceholderReplace() string { return In(i18n.Locale()).TokPlaceholderReplace() }
+
+// TokPlaceholderReplace says "Paste a new token to replace the saved one"
+// in the language of msgs.
+//
+// Placeholder of the token input when a token is already saved.
+func (msgs Messages) TokPlaceholderReplace() string {
+	return Catalog.Format(msgs.locale, "tokPlaceholderReplace", nil)
+}
+
+// TokShow says "Show"
+// in the language the app shows.
+//
+// Toggle that temporarily shows what is being typed in the token input
+// (never the saved token).
+func TokShow() string { return In(i18n.Locale()).TokShow() }
+
+// TokShow says "Show"
+// in the language of msgs.
+//
+// Toggle that temporarily shows what is being typed in the token input
+// (never the saved token).
+func (msgs Messages) TokShow() string {
+	return Catalog.Format(msgs.locale, "tokShow", nil)
+}
+
+// TokSave says "Save token"
+// in the language the app shows.
+//
+// Button that saves (or replaces) the typed token in the system credential
+// store.
+func TokSave() string { return In(i18n.Locale()).TokSave() }
+
+// TokSave says "Save token"
+// in the language of msgs.
+//
+// Button that saves (or replaces) the typed token in the system credential
+// store.
+func (msgs Messages) TokSave() string {
+	return Catalog.Format(msgs.locale, "tokSave", nil)
+}
+
+// TokSaved says "Saved ••••{last4}"
+// in the language the app shows.
+//
+// Status of a saved token: only its last 4 characters are ever shown.
+func TokSaved(last4 string) string { return In(i18n.Locale()).TokSaved(last4) }
+
+// TokSaved says "Saved ••••{last4}"
+// in the language of msgs.
+//
+// Status of a saved token: only its last 4 characters are ever shown.
+func (msgs Messages) TokSaved(last4 string) string {
+	return Catalog.Format(msgs.locale, "tokSaved", map[string]any{"last4": last4})
+}
+
+// TokNotSaved says "No token saved"
+// in the language the app shows.
+//
+// Status when no token is saved at this level.
+func TokNotSaved() string { return In(i18n.Locale()).TokNotSaved() }
+
+// TokNotSaved says "No token saved"
+// in the language of msgs.
+//
+// Status when no token is saved at this level.
+func (msgs Messages) TokNotSaved() string {
+	return Catalog.Format(msgs.locale, "tokNotSaved", nil)
+}
+
+// TokInUse says "Token in use: {source}"
+// in the language the app shows.
+//
+// Which layer the effective token of the project comes from.
+func TokInUse(source string) string { return In(i18n.Locale()).TokInUse(source) }
+
+// TokInUse says "Token in use: {source}"
+// in the language of msgs.
+//
+// Which layer the effective token of the project comes from.
+func (msgs Messages) TokInUse(source string) string {
+	return Catalog.Format(msgs.locale, "tokInUse", map[string]any{"source": source})
+}
+
+// TokSourceEnv says "environment variable {name}"
+// in the language the app shows.
+//
+// Token source: an environment variable.
+func TokSourceEnv(name string) string { return In(i18n.Locale()).TokSourceEnv(name) }
+
+// TokSourceEnv says "environment variable {name}"
+// in the language of msgs.
+//
+// Token source: an environment variable.
+func (msgs Messages) TokSourceEnv(name string) string {
+	return Catalog.Format(msgs.locale, "tokSourceEnv", map[string]any{"name": name})
+}
+
+// TokSourceProject says "project token"
+// in the language the app shows.
+//
+// Token source: the project's own token in the credential store.
+func TokSourceProject() string { return In(i18n.Locale()).TokSourceProject() }
+
+// TokSourceProject says "project token"
+// in the language of msgs.
+//
+// Token source: the project's own token in the credential store.
+func (msgs Messages) TokSourceProject() string {
+	return Catalog.Format(msgs.locale, "tokSourceProject", nil)
+}
+
+// TokSourceGlobal says "global token of the profile"
+// in the language the app shows.
+//
+// Token source: the selected profile's global token in the credential
+// store.
+func TokSourceGlobal() string { return In(i18n.Locale()).TokSourceGlobal() }
+
+// TokSourceGlobal says "global token of the profile"
+// in the language of msgs.
+//
+// Token source: the selected profile's global token in the credential
+// store.
+func (msgs Messages) TokSourceGlobal() string {
+	return Catalog.Format(msgs.locale, "tokSourceGlobal", nil)
+}
+
+// TokSourceFile says "plain text in a config file"
+// in the language the app shows.
+//
+// Token source: a legacy plaintext field in a config file.
+func TokSourceFile() string { return In(i18n.Locale()).TokSourceFile() }
+
+// TokSourceFile says "plain text in a config file"
+// in the language of msgs.
+//
+// Token source: a legacy plaintext field in a config file.
+func (msgs Messages) TokSourceFile() string {
+	return Catalog.Format(msgs.locale, "tokSourceFile", nil)
+}
+
+// TokSourceNone says "none"
+// in the language the app shows.
+//
+// Token source: no token found.
+func TokSourceNone() string { return In(i18n.Locale()).TokSourceNone() }
+
+// TokSourceNone says "none"
+// in the language of msgs.
+//
+// Token source: no token found.
+func (msgs Messages) TokSourceNone() string {
+	return Catalog.Format(msgs.locale, "tokSourceNone", nil)
+}
+
+// TokGlobalHint says "Stored in the system credential store. Every project using this profile uses it, unless the project has its own token…"
+// in the language the app shows.
+//
+// Explanation under a profile's (global) token.
+func TokGlobalHint() string { return In(i18n.Locale()).TokGlobalHint() }
+
+// TokGlobalHint says "Stored in the system credential store. Every project using this profile uses it, unless the project has its own token…"
+// in the language of msgs.
+//
+// Explanation under a profile's (global) token.
+func (msgs Messages) TokGlobalHint() string {
+	return Catalog.Format(msgs.locale, "tokGlobalHint", nil)
+}
+
+// TokDelete says "Delete token…"
+// in the language the app shows.
+//
+// Button that asks to delete the saved token.
+func TokDelete() string { return In(i18n.Locale()).TokDelete() }
+
+// TokDelete says "Delete token…"
+// in the language of msgs.
+//
+// Button that asks to delete the saved token.
+func (msgs Messages) TokDelete() string {
+	return Catalog.Format(msgs.locale, "tokDelete", nil)
+}
+
+// TokDeleteTitle says "Delete the saved token?"
+// in the language the app shows.
+//
+// Title of the token deletion confirmation.
+func TokDeleteTitle() string { return In(i18n.Locale()).TokDeleteTitle() }
+
+// TokDeleteTitle says "Delete the saved token?"
+// in the language of msgs.
+//
+// Title of the token deletion confirmation.
+func (msgs Messages) TokDeleteTitle() string {
+	return Catalog.Format(msgs.locale, "tokDeleteTitle", nil)
+}
+
+// TokDeleteMessage says "It is removed from the system credential store. The CLI and git hooks stop using it too."
+// in the language the app shows.
+//
+// Message of the token deletion confirmation.
+func TokDeleteMessage() string { return In(i18n.Locale()).TokDeleteMessage() }
+
+// TokDeleteMessage says "It is removed from the system credential store. The CLI and git hooks stop using it too."
+// in the language of msgs.
+//
+// Message of the token deletion confirmation.
+func (msgs Messages) TokDeleteMessage() string {
+	return Catalog.Format(msgs.locale, "tokDeleteMessage", nil)
+}
+
+// TokDeleteConfirm says "Delete"
+// in the language the app shows.
+//
+// Confirm button of the token deletion dialog.
+func TokDeleteConfirm() string { return In(i18n.Locale()).TokDeleteConfirm() }
+
+// TokDeleteConfirm says "Delete"
+// in the language of msgs.
+//
+// Confirm button of the token deletion dialog.
+func (msgs Messages) TokDeleteConfirm() string {
+	return Catalog.Format(msgs.locale, "tokDeleteConfirm", nil)
+}
+
+// TokBlocked says "This project points the provider to a different address, so the global token is not sent there. Save a project token …"
+// in the language the app shows.
+//
+// Warning when the project overrides the base URL / endpoint and the global
+// token is withheld.
+func TokBlocked() string { return In(i18n.Locale()).TokBlocked() }
+
+// TokBlocked says "This project points the provider to a different address, so the global token is not sent there. Save a project token …"
+// in the language of msgs.
+//
+// Warning when the project overrides the base URL / endpoint and the global
+// token is withheld.
+func (msgs Messages) TokBlocked() string {
+	return Catalog.Format(msgs.locale, "tokBlocked", nil)
+}
+
+// TokPlaintext says "A token is stored in plain text: {locations}"
+// in the language the app shows.
+//
+// Warning bar when config files contain plaintext tokens.
+func TokPlaintext(locations string) string { return In(i18n.Locale()).TokPlaintext(locations) }
+
+// TokPlaintext says "A token is stored in plain text: {locations}"
+// in the language of msgs.
+//
+// Warning bar when config files contain plaintext tokens.
+func (msgs Messages) TokPlaintext(locations string) string {
+	return Catalog.Format(msgs.locale, "tokPlaintext", map[string]any{"locations": locations})
+}
+
+// TokMigrate says "Move to system credential store"
+// in the language the app shows.
+//
+// Button that migrates plaintext tokens into the system credential store.
+func TokMigrate() string { return In(i18n.Locale()).TokMigrate() }
+
+// TokMigrate says "Move to system credential store"
+// in the language of msgs.
+//
+// Button that migrates plaintext tokens into the system credential store.
+func (msgs Messages) TokMigrate() string {
+	return Catalog.Format(msgs.locale, "tokMigrate", nil)
+}
+
+// TokTest says "Test connection"
+// in the language the app shows.
+//
+// Button that sends a short request with the effective settings and token.
+func TokTest() string { return In(i18n.Locale()).TokTest() }
+
+// TokTest says "Test connection"
+// in the language of msgs.
+//
+// Button that sends a short request with the effective settings and token.
+func (msgs Messages) TokTest() string {
+	return Catalog.Format(msgs.locale, "tokTest", nil)
+}
+
+// TokTesting says "Testing…"
+// in the language the app shows.
+//
+// Shown while the connection test runs.
+func TokTesting() string { return In(i18n.Locale()).TokTesting() }
+
+// TokTesting says "Testing…"
+// in the language of msgs.
+//
+// Shown while the connection test runs.
+func (msgs Messages) TokTesting() string {
+	return Catalog.Format(msgs.locale, "tokTesting", nil)
+}
+
+// TokTestOK says "Connected in {ms} ms"
+// in the language the app shows.
+//
+// Connection test succeeded.
+func TokTestOK(ms int) string { return In(i18n.Locale()).TokTestOK(ms) }
+
+// TokTestOK says "Connected in {ms} ms"
+// in the language of msgs.
+//
+// Connection test succeeded.
+func (msgs Messages) TokTestOK(ms int) string {
+	return Catalog.Format(msgs.locale, "tokTestOK", map[string]any{"ms": ms})
+}
+
+// TokTestFailed says "Connection failed: {error}"
+// in the language the app shows.
+//
+// Connection test failed (the error never contains the token).
+func TokTestFailed(error string) string { return In(i18n.Locale()).TokTestFailed(error) }
+
+// TokTestFailed says "Connection failed: {error}"
+// in the language of msgs.
+//
+// Connection test failed (the error never contains the token).
+func (msgs Messages) TokTestFailed(error string) string {
+	return Catalog.Format(msgs.locale, "tokTestFailed", map[string]any{"error": error})
+}
+
+// PsTitle says "Project settings"
+// in the language the app shows.
+//
+// Title of the project settings page.
+func PsTitle() string { return In(i18n.Locale()).PsTitle() }
+
+// PsTitle says "Project settings"
+// in the language of msgs.
+//
+// Title of the project settings page.
+func (msgs Messages) PsTitle() string {
+	return Catalog.Format(msgs.locale, "psTitle", nil)
+}
+
+// PsBack says "Back to overview"
+// in the language the app shows.
+//
+// Button returning from project settings to the project overview.
+func PsBack() string { return In(i18n.Locale()).PsBack() }
+
+// PsBack says "Back to overview"
+// in the language of msgs.
+//
+// Button returning from project settings to the project overview.
+func (msgs Messages) PsBack() string {
+	return Catalog.Format(msgs.locale, "psBack", nil)
+}
+
+// PsIntro says "Each value is inherited from the defaults or your global settings unless this project overrides it. Overrides are sav…"
+// in the language the app shows.
+//
+// Explanation at the top of the project settings page.
+func PsIntro() string { return In(i18n.Locale()).PsIntro() }
+
+// PsIntro says "Each value is inherited from the defaults or your global settings unless this project overrides it. Overrides are sav…"
+// in the language of msgs.
+//
+// Explanation at the top of the project settings page.
+func (msgs Messages) PsIntro() string {
+	return Catalog.Format(msgs.locale, "psIntro", nil)
+}
+
+// PsLegend says "Priority, lowest first:"
+// in the language the app shows.
+//
+// Label before the legend of source layers.
+func PsLegend() string { return In(i18n.Locale()).PsLegend() }
+
+// PsLegend says "Priority, lowest first:"
+// in the language of msgs.
+//
+// Label before the legend of source layers.
+func (msgs Messages) PsLegend() string {
+	return Catalog.Format(msgs.locale, "psLegend", nil)
+}
+
+// PsFieldSourceLanguage says "Source language"
+// in the language the app shows.
+//
+// Project field: language of the code comments.
+func PsFieldSourceLanguage() string { return In(i18n.Locale()).PsFieldSourceLanguage() }
+
+// PsFieldSourceLanguage says "Source language"
+// in the language of msgs.
+//
+// Project field: language of the code comments.
+func (msgs Messages) PsFieldSourceLanguage() string {
+	return Catalog.Format(msgs.locale, "psFieldSourceLanguage", nil)
+}
+
+// PsFieldLocalLanguage says "Translation language"
+// in the language the app shows.
+//
+// Project field: language the comments are translated to.
+func PsFieldLocalLanguage() string { return In(i18n.Locale()).PsFieldLocalLanguage() }
+
+// PsFieldLocalLanguage says "Translation language"
+// in the language of msgs.
+//
+// Project field: language the comments are translated to.
+func (msgs Messages) PsFieldLocalLanguage() string {
+	return Catalog.Format(msgs.locale, "psFieldLocalLanguage", nil)
+}
+
+// PsFieldProfile says "Provider profile"
+// in the language the app shows.
+//
+// Project field: the global provider profile the project uses.
+func PsFieldProfile() string { return In(i18n.Locale()).PsFieldProfile() }
+
+// PsFieldProfile says "Provider profile"
+// in the language of msgs.
+//
+// Project field: the global provider profile the project uses.
+func (msgs Messages) PsFieldProfile() string {
+	return Catalog.Format(msgs.locale, "psFieldProfile", nil)
+}
+
+// PsFieldProvider says "Provider"
+// in the language the app shows.
+//
+// Project field: translation provider (openai / ollama / mock).
+func PsFieldProvider() string { return In(i18n.Locale()).PsFieldProvider() }
+
+// PsFieldProvider says "Provider"
+// in the language of msgs.
+//
+// Project field: translation provider (openai / ollama / mock).
+func (msgs Messages) PsFieldProvider() string {
+	return Catalog.Format(msgs.locale, "psFieldProvider", nil)
+}
+
+// PsFieldBaseUrl says "Base URL"
+// in the language the app shows.
+//
+// Project field: API base URL.
+func PsFieldBaseUrl() string { return In(i18n.Locale()).PsFieldBaseUrl() }
+
+// PsFieldBaseUrl says "Base URL"
+// in the language of msgs.
+//
+// Project field: API base URL.
+func (msgs Messages) PsFieldBaseUrl() string {
+	return Catalog.Format(msgs.locale, "psFieldBaseUrl", nil)
+}
+
+// PsFieldModel says "Model"
+// in the language the app shows.
+//
+// Project field: model name.
+func PsFieldModel() string { return In(i18n.Locale()).PsFieldModel() }
+
+// PsFieldModel says "Model"
+// in the language of msgs.
+//
+// Project field: model name.
+func (msgs Messages) PsFieldModel() string {
+	return Catalog.Format(msgs.locale, "psFieldModel", nil)
+}
+
+// PsFieldEndpoint says "Endpoint (Ollama)"
+// in the language the app shows.
+//
+// Project field: Ollama endpoint.
+func PsFieldEndpoint() string { return In(i18n.Locale()).PsFieldEndpoint() }
+
+// PsFieldEndpoint says "Endpoint (Ollama)"
+// in the language of msgs.
+//
+// Project field: Ollama endpoint.
+func (msgs Messages) PsFieldEndpoint() string {
+	return Catalog.Format(msgs.locale, "psFieldEndpoint", nil)
+}
+
+// PsFieldBatchSize says "Batch size"
+// in the language the app shows.
+//
+// Project field: comments per request.
+func PsFieldBatchSize() string { return In(i18n.Locale()).PsFieldBatchSize() }
+
+// PsFieldBatchSize says "Batch size"
+// in the language of msgs.
+//
+// Project field: comments per request.
+func (msgs Messages) PsFieldBatchSize() string {
+	return Catalog.Format(msgs.locale, "psFieldBatchSize", nil)
+}
+
+// PsFieldConcurrency says "Concurrency"
+// in the language the app shows.
+//
+// Project field: parallel requests.
+func PsFieldConcurrency() string { return In(i18n.Locale()).PsFieldConcurrency() }
+
+// PsFieldConcurrency says "Concurrency"
+// in the language of msgs.
+//
+// Project field: parallel requests.
+func (msgs Messages) PsFieldConcurrency() string {
+	return Catalog.Format(msgs.locale, "psFieldConcurrency", nil)
+}
+
+// PsFieldExcludePatterns says "Exclude patterns (one per line)"
+// in the language the app shows.
+//
+// Project field: glob patterns of files to skip.
+func PsFieldExcludePatterns() string { return In(i18n.Locale()).PsFieldExcludePatterns() }
+
+// PsFieldExcludePatterns says "Exclude patterns (one per line)"
+// in the language of msgs.
+//
+// Project field: glob patterns of files to skip.
+func (msgs Messages) PsFieldExcludePatterns() string {
+	return Catalog.Format(msgs.locale, "psFieldExcludePatterns", nil)
+}
+
+// PsFieldDetectLanguages says "Detected languages (one per line)"
+// in the language the app shows.
+//
+// Project field: languages the comment language detector considers.
+func PsFieldDetectLanguages() string { return In(i18n.Locale()).PsFieldDetectLanguages() }
+
+// PsFieldDetectLanguages says "Detected languages (one per line)"
+// in the language of msgs.
+//
+// Project field: languages the comment language detector considers.
+func (msgs Messages) PsFieldDetectLanguages() string {
+	return Catalog.Format(msgs.locale, "psFieldDetectLanguages", nil)
+}
+
+// PsSourceDefault says "Default"
+// in the language the app shows.
+//
+// Source badge: the value is the built-in default.
+func PsSourceDefault() string { return In(i18n.Locale()).PsSourceDefault() }
+
+// PsSourceDefault says "Default"
+// in the language of msgs.
+//
+// Source badge: the value is the built-in default.
+func (msgs Messages) PsSourceDefault() string {
+	return Catalog.Format(msgs.locale, "psSourceDefault", nil)
+}
+
+// PsSourceGlobal says "Global"
+// in the language the app shows.
+//
+// Source badge: the value comes from the global settings (or the selected
+// profile).
+func PsSourceGlobal() string { return In(i18n.Locale()).PsSourceGlobal() }
+
+// PsSourceGlobal says "Global"
+// in the language of msgs.
+//
+// Source badge: the value comes from the global settings (or the selected
+// profile).
+func (msgs Messages) PsSourceGlobal() string {
+	return Catalog.Format(msgs.locale, "psSourceGlobal", nil)
+}
+
+// PsSourceProject says "Project"
+// in the language the app shows.
+//
+// Source badge: the value is overridden in this project's config.
+func PsSourceProject() string { return In(i18n.Locale()).PsSourceProject() }
+
+// PsSourceProject says "Project"
+// in the language of msgs.
+//
+// Source badge: the value is overridden in this project's config.
+func (msgs Messages) PsSourceProject() string {
+	return Catalog.Format(msgs.locale, "psSourceProject", nil)
+}
+
+// PsSourceOverride says "Session override"
+// in the language the app shows.
+//
+// Source badge: the value is a temporary override of this session.
+func PsSourceOverride() string { return In(i18n.Locale()).PsSourceOverride() }
+
+// PsSourceOverride says "Session override"
+// in the language of msgs.
+//
+// Source badge: the value is a temporary override of this session.
+func (msgs Messages) PsSourceOverride() string {
+	return Catalog.Format(msgs.locale, "psSourceOverride", nil)
+}
+
+// PsOverride says "Override"
+// in the language the app shows.
+//
+// Button saving the edited value into the project's config.
+func PsOverride() string { return In(i18n.Locale()).PsOverride() }
+
+// PsOverride says "Override"
+// in the language of msgs.
+//
+// Button saving the edited value into the project's config.
+func (msgs Messages) PsOverride() string {
+	return Catalog.Format(msgs.locale, "psOverride", nil)
+}
+
+// PsReset says "Reset"
+// in the language the app shows.
+//
+// Button removing the field from the project's config so it is inherited
+// again.
+func PsReset() string { return In(i18n.Locale()).PsReset() }
+
+// PsReset says "Reset"
+// in the language of msgs.
+//
+// Button removing the field from the project's config so it is inherited
+// again.
+func (msgs Messages) PsReset() string {
+	return Catalog.Format(msgs.locale, "psReset", nil)
+}
+
+// PsResetHint says "Remove this value from the project and inherit it again"
+// in the language the app shows.
+//
+// Tooltip of the Reset button.
+func PsResetHint() string { return In(i18n.Locale()).PsResetHint() }
+
+// PsResetHint says "Remove this value from the project and inherit it again"
+// in the language of msgs.
+//
+// Tooltip of the Reset button.
+func (msgs Messages) PsResetHint() string {
+	return Catalog.Format(msgs.locale, "psResetHint", nil)
+}
+
+// PsResetAll says "Restore all inheritance…"
+// in the language the app shows.
+//
+// Button removing every field from the project's config.
+func PsResetAll() string { return In(i18n.Locale()).PsResetAll() }
+
+// PsResetAll says "Restore all inheritance…"
+// in the language of msgs.
+//
+// Button removing every field from the project's config.
+func (msgs Messages) PsResetAll() string {
+	return Catalog.Format(msgs.locale, "psResetAll", nil)
+}
+
+// PsResetAllTitle says "Restore inheritance for all fields?"
+// in the language the app shows.
+//
+// Title of the restore-all confirmation.
+func PsResetAllTitle() string { return In(i18n.Locale()).PsResetAllTitle() }
+
+// PsResetAllTitle says "Restore inheritance for all fields?"
+// in the language of msgs.
+//
+// Title of the restore-all confirmation.
+func (msgs Messages) PsResetAllTitle() string {
+	return Catalog.Format(msgs.locale, "psResetAllTitle", nil)
+}
+
+// PsResetAllMessage says "Every value saved in this project's config is removed and inherited again."
+// in the language the app shows.
+//
+// Message of the restore-all confirmation when no project token is saved.
+func PsResetAllMessage() string { return In(i18n.Locale()).PsResetAllMessage() }
+
+// PsResetAllMessage says "Every value saved in this project's config is removed and inherited again."
+// in the language of msgs.
+//
+// Message of the restore-all confirmation when no project token is saved.
+func (msgs Messages) PsResetAllMessage() string {
+	return Catalog.Format(msgs.locale, "psResetAllMessage", nil)
+}
+
+// PsResetAllTokenMessage says "Every value saved in this project's config is removed and inherited again. Do you also want to delete this project's …"
+// in the language the app shows.
+//
+// Message of the restore-all confirmation when a project token is saved.
+func PsResetAllTokenMessage() string { return In(i18n.Locale()).PsResetAllTokenMessage() }
+
+// PsResetAllTokenMessage says "Every value saved in this project's config is removed and inherited again. Do you also want to delete this project's …"
+// in the language of msgs.
+//
+// Message of the restore-all confirmation when a project token is saved.
+func (msgs Messages) PsResetAllTokenMessage() string {
+	return Catalog.Format(msgs.locale, "psResetAllTokenMessage", nil)
+}
+
+// PsResetAllConfirm says "Restore"
+// in the language the app shows.
+//
+// Confirm button of the restore-all dialog when no project token is saved.
+func PsResetAllConfirm() string { return In(i18n.Locale()).PsResetAllConfirm() }
+
+// PsResetAllConfirm says "Restore"
+// in the language of msgs.
+//
+// Confirm button of the restore-all dialog when no project token is saved.
+func (msgs Messages) PsResetAllConfirm() string {
+	return Catalog.Format(msgs.locale, "psResetAllConfirm", nil)
+}
+
+// PsKeepToken says "Keep token"
+// in the language the app shows.
+//
+// Restore-all dialog: restore inheritance but keep the project token.
+func PsKeepToken() string { return In(i18n.Locale()).PsKeepToken() }
+
+// PsKeepToken says "Keep token"
+// in the language of msgs.
+//
+// Restore-all dialog: restore inheritance but keep the project token.
+func (msgs Messages) PsKeepToken() string {
+	return Catalog.Format(msgs.locale, "psKeepToken", nil)
+}
+
+// PsDeleteToken says "Delete token too"
+// in the language the app shows.
+//
+// Restore-all dialog: restore inheritance and delete the project token.
+func PsDeleteToken() string { return In(i18n.Locale()).PsDeleteToken() }
+
+// PsDeleteToken says "Delete token too"
+// in the language of msgs.
+//
+// Restore-all dialog: restore inheritance and delete the project token.
+func (msgs Messages) PsDeleteToken() string {
+	return Catalog.Format(msgs.locale, "psDeleteToken", nil)
+}
+
+// PsTokenTitle says "Project token"
+// in the language the app shows.
+//
+// Heading of the project's own API token.
+func PsTokenTitle() string { return In(i18n.Locale()).PsTokenTitle() }
+
+// PsTokenTitle says "Project token"
+// in the language of msgs.
+//
+// Heading of the project's own API token.
+func (msgs Messages) PsTokenTitle() string {
+	return Catalog.Format(msgs.locale, "psTokenTitle", nil)
+}
+
+// PsTokenHint says "A project token is used only by this project and takes priority over the profile's global token."
+// in the language the app shows.
+//
+// Explanation of the project token.
+func PsTokenHint() string { return In(i18n.Locale()).PsTokenHint() }
+
+// PsTokenHint says "A project token is used only by this project and takes priority over the profile's global token."
+// in the language of msgs.
+//
+// Explanation of the project token.
+func (msgs Messages) PsTokenHint() string {
+	return Catalog.Format(msgs.locale, "psTokenHint", nil)
+}
+
+// GsTitle says "Settings"
+// in the language the app shows.
+//
+// Title of the global settings page.
+func GsTitle() string { return In(i18n.Locale()).GsTitle() }
+
+// GsTitle says "Settings"
+// in the language of msgs.
+//
+// Title of the global settings page.
+func (msgs Messages) GsTitle() string {
+	return Catalog.Format(msgs.locale, "gsTitle", nil)
+}
+
+// GsProfiles says "Provider profiles"
+// in the language the app shows.
+//
+// Heading of the list of global provider profiles.
+func GsProfiles() string { return In(i18n.Locale()).GsProfiles() }
+
+// GsProfiles says "Provider profiles"
+// in the language of msgs.
+//
+// Heading of the list of global provider profiles.
+func (msgs Messages) GsProfiles() string {
+	return Catalog.Format(msgs.locale, "gsProfiles", nil)
+}
+
+// GsNoProfiles says "No profiles yet. Create one to configure a translation provider."
+// in the language the app shows.
+//
+// Shown when there is no profile.
+func GsNoProfiles() string { return In(i18n.Locale()).GsNoProfiles() }
+
+// GsNoProfiles says "No profiles yet. Create one to configure a translation provider."
+// in the language of msgs.
+//
+// Shown when there is no profile.
+func (msgs Messages) GsNoProfiles() string {
+	return Catalog.Format(msgs.locale, "gsNoProfiles", nil)
+}
+
+// GsNewProfileName says "New profile name"
+// in the language the app shows.
+//
+// Input for the name of a new profile.
+func GsNewProfileName() string { return In(i18n.Locale()).GsNewProfileName() }
+
+// GsNewProfileName says "New profile name"
+// in the language of msgs.
+//
+// Input for the name of a new profile.
+func (msgs Messages) GsNewProfileName() string {
+	return Catalog.Format(msgs.locale, "gsNewProfileName", nil)
+}
+
+// GsNew says "New"
+// in the language the app shows.
+//
+// Button creating a profile.
+func GsNew() string { return In(i18n.Locale()).GsNew() }
+
+// GsNew says "New"
+// in the language of msgs.
+//
+// Button creating a profile.
+func (msgs Messages) GsNew() string {
+	return Catalog.Format(msgs.locale, "gsNew", nil)
+}
+
+// GsCopy says "Copy"
+// in the language the app shows.
+//
+// Button duplicating the selected profile (without its token).
+func GsCopy() string { return In(i18n.Locale()).GsCopy() }
+
+// GsCopy says "Copy"
+// in the language of msgs.
+//
+// Button duplicating the selected profile (without its token).
+func (msgs Messages) GsCopy() string {
+	return Catalog.Format(msgs.locale, "gsCopy", nil)
+}
+
+// GsDelete says "Delete…"
+// in the language the app shows.
+//
+// Button asking to delete the selected profile.
+func GsDelete() string { return In(i18n.Locale()).GsDelete() }
+
+// GsDelete says "Delete…"
+// in the language of msgs.
+//
+// Button asking to delete the selected profile.
+func (msgs Messages) GsDelete() string {
+	return Catalog.Format(msgs.locale, "gsDelete", nil)
+}
+
+// GsDeleteTitle says "Delete profile “{name}”?"
+// in the language the app shows.
+//
+// Title of the profile deletion confirmation.
+func GsDeleteTitle(name string) string { return In(i18n.Locale()).GsDeleteTitle(name) }
+
+// GsDeleteTitle says "Delete profile “{name}”?"
+// in the language of msgs.
+//
+// Title of the profile deletion confirmation.
+func (msgs Messages) GsDeleteTitle(name string) string {
+	return Catalog.Format(msgs.locale, "gsDeleteTitle", map[string]any{"name": name})
+}
+
+// GsDeleteMessage says "Its saved API token is deleted from the system credential store too. Projects using this profile fall back to the def…"
+// in the language the app shows.
+//
+// Message of the profile deletion confirmation.
+func GsDeleteMessage() string { return In(i18n.Locale()).GsDeleteMessage() }
+
+// GsDeleteMessage says "Its saved API token is deleted from the system credential store too. Projects using this profile fall back to the def…"
+// in the language of msgs.
+//
+// Message of the profile deletion confirmation.
+func (msgs Messages) GsDeleteMessage() string {
+	return Catalog.Format(msgs.locale, "gsDeleteMessage", nil)
+}
+
+// GsDeleteConfirm says "Delete profile"
+// in the language the app shows.
+//
+// Confirm button of the profile deletion dialog.
+func GsDeleteConfirm() string { return In(i18n.Locale()).GsDeleteConfirm() }
+
+// GsDeleteConfirm says "Delete profile"
+// in the language of msgs.
+//
+// Confirm button of the profile deletion dialog.
+func (msgs Messages) GsDeleteConfirm() string {
+	return Catalog.Format(msgs.locale, "gsDeleteConfirm", nil)
+}
+
+// GsUseDefault says "Use as default"
+// in the language the app shows.
+//
+// Button making the selected profile the global default.
+func GsUseDefault() string { return In(i18n.Locale()).GsUseDefault() }
+
+// GsUseDefault says "Use as default"
+// in the language of msgs.
+//
+// Button making the selected profile the global default.
+func (msgs Messages) GsUseDefault() string {
+	return Catalog.Format(msgs.locale, "gsUseDefault", nil)
+}
+
+// GsDefaultBadge says "Default"
+// in the language the app shows.
+//
+// Badge marking the default profile.
+func GsDefaultBadge() string { return In(i18n.Locale()).GsDefaultBadge() }
+
+// GsDefaultBadge says "Default"
+// in the language of msgs.
+//
+// Badge marking the default profile.
+func (msgs Messages) GsDefaultBadge() string {
+	return Catalog.Format(msgs.locale, "gsDefaultBadge", nil)
+}
+
+// GsName says "Name"
+// in the language the app shows.
+//
+// Profile field: name (changing it renames the profile and keeps its
+// token).
+func GsName() string { return In(i18n.Locale()).GsName() }
+
+// GsName says "Name"
+// in the language of msgs.
+//
+// Profile field: name (changing it renames the profile and keeps its
+// token).
+func (msgs Messages) GsName() string {
+	return Catalog.Format(msgs.locale, "gsName", nil)
+}
+
+// GsProvider says "Provider"
+// in the language the app shows.
+//
+// Profile field: provider.
+func GsProvider() string { return In(i18n.Locale()).GsProvider() }
+
+// GsProvider says "Provider"
+// in the language of msgs.
+//
+// Profile field: provider.
+func (msgs Messages) GsProvider() string {
+	return Catalog.Format(msgs.locale, "gsProvider", nil)
+}
+
+// GsBaseUrl says "Base URL"
+// in the language the app shows.
+//
+// Profile field: API base URL.
+func GsBaseUrl() string { return In(i18n.Locale()).GsBaseUrl() }
+
+// GsBaseUrl says "Base URL"
+// in the language of msgs.
+//
+// Profile field: API base URL.
+func (msgs Messages) GsBaseUrl() string {
+	return Catalog.Format(msgs.locale, "gsBaseUrl", nil)
+}
+
+// GsModel says "Model"
+// in the language the app shows.
+//
+// Profile field: model name.
+func GsModel() string { return In(i18n.Locale()).GsModel() }
+
+// GsModel says "Model"
+// in the language of msgs.
+//
+// Profile field: model name.
+func (msgs Messages) GsModel() string {
+	return Catalog.Format(msgs.locale, "gsModel", nil)
+}
+
+// GsEndpoint says "Endpoint (Ollama)"
+// in the language the app shows.
+//
+// Profile field: Ollama endpoint.
+func GsEndpoint() string { return In(i18n.Locale()).GsEndpoint() }
+
+// GsEndpoint says "Endpoint (Ollama)"
+// in the language of msgs.
+//
+// Profile field: Ollama endpoint.
+func (msgs Messages) GsEndpoint() string {
+	return Catalog.Format(msgs.locale, "gsEndpoint", nil)
+}
+
+// GsBatchSize says "Batch size"
+// in the language the app shows.
+//
+// Profile field: comments per request (empty = default).
+func GsBatchSize() string { return In(i18n.Locale()).GsBatchSize() }
+
+// GsBatchSize says "Batch size"
+// in the language of msgs.
+//
+// Profile field: comments per request (empty = default).
+func (msgs Messages) GsBatchSize() string {
+	return Catalog.Format(msgs.locale, "gsBatchSize", nil)
+}
+
+// GsConcurrency says "Concurrency"
+// in the language the app shows.
+//
+// Profile field: parallel requests (empty = default).
+func GsConcurrency() string { return In(i18n.Locale()).GsConcurrency() }
+
+// GsConcurrency says "Concurrency"
+// in the language of msgs.
+//
+// Profile field: parallel requests (empty = default).
+func (msgs Messages) GsConcurrency() string {
+	return Catalog.Format(msgs.locale, "gsConcurrency", nil)
+}
+
+// GsSave says "Save profile"
+// in the language the app shows.
+//
+// Button saving the profile fields.
+func GsSave() string { return In(i18n.Locale()).GsSave() }
+
+// GsSave says "Save profile"
+// in the language of msgs.
+//
+// Button saving the profile fields.
+func (msgs Messages) GsSave() string {
+	return Catalog.Format(msgs.locale, "gsSave", nil)
+}
+
+// GsTokenTitle says "Profile token"
+// in the language the app shows.
+//
+// Heading of the selected profile's API token.
+func GsTokenTitle() string { return In(i18n.Locale()).GsTokenTitle() }
+
+// GsTokenTitle says "Profile token"
+// in the language of msgs.
+//
+// Heading of the selected profile's API token.
+func (msgs Messages) GsTokenTitle() string {
+	return Catalog.Format(msgs.locale, "gsTokenTitle", nil)
+}
+
+// GsApp says "App"
+// in the language the app shows.
+//
+// Heading of the desktop app's own settings.
+func GsApp() string { return In(i18n.Locale()).GsApp() }
+
+// GsApp says "App"
+// in the language of msgs.
+//
+// Heading of the desktop app's own settings.
+func (msgs Messages) GsApp() string {
+	return Catalog.Format(msgs.locale, "gsApp", nil)
+}
+
+// GsLanguage says "Interface language"
+// in the language the app shows.
+//
+// Setting: language of this app's interface.
+func GsLanguage() string { return In(i18n.Locale()).GsLanguage() }
+
+// GsLanguage says "Interface language"
+// in the language of msgs.
+//
+// Setting: language of this app's interface.
+func (msgs Messages) GsLanguage() string {
+	return Catalog.Format(msgs.locale, "gsLanguage", nil)
+}
+
+// GsLanguageSystem says "Follow system"
+// in the language the app shows.
+//
+// Interface language option: use the system's language.
+func GsLanguageSystem() string { return In(i18n.Locale()).GsLanguageSystem() }
+
+// GsLanguageSystem says "Follow system"
+// in the language of msgs.
+//
+// Interface language option: use the system's language.
+func (msgs Messages) GsLanguageSystem() string {
+	return Catalog.Format(msgs.locale, "gsLanguageSystem", nil)
+}
+
+// GsLanguageHint says "Only changes the language of this app. Each project's translation language is set in its project settings."
+// in the language the app shows.
+//
+// Explains that the UI language is independent from the projects'
+// translation target language.
+func GsLanguageHint() string { return In(i18n.Locale()).GsLanguageHint() }
+
+// GsLanguageHint says "Only changes the language of this app. Each project's translation language is set in its project settings."
+// in the language of msgs.
+//
+// Explains that the UI language is independent from the projects'
+// translation target language.
+func (msgs Messages) GsLanguageHint() string {
+	return Catalog.Format(msgs.locale, "gsLanguageHint", nil)
+}
+
+// GsWatch says "Watch project files and rescan in the background"
+// in the language the app shows.
+//
+// Setting: file watching.
+func GsWatch() string { return In(i18n.Locale()).GsWatch() }
+
+// GsWatch says "Watch project files and rescan in the background"
+// in the language of msgs.
+//
+// Setting: file watching.
+func (msgs Messages) GsWatch() string {
+	return Catalog.Format(msgs.locale, "gsWatch", nil)
+}
+
+// GsWatchHint says "Changed files are scanned incrementally; nothing is translated automatically."
+// in the language the app shows.
+//
+// Explanation of file watching.
+func GsWatchHint() string { return In(i18n.Locale()).GsWatchHint() }
+
+// GsWatchHint says "Changed files are scanned incrementally; nothing is translated automatically."
+// in the language of msgs.
+//
+// Explanation of file watching.
+func (msgs Messages) GsWatchHint() string {
+	return Catalog.Format(msgs.locale, "gsWatchHint", nil)
+}
+
+// GsMaxParallel says "Projects processed in parallel: {count}"
+// in the language the app shows.
+//
+// Setting: how many projects batch tasks run at once.
+func GsMaxParallel(count int) string { return In(i18n.Locale()).GsMaxParallel(count) }
+
+// GsMaxParallel says "Projects processed in parallel: {count}"
+// in the language of msgs.
+//
+// Setting: how many projects batch tasks run at once.
+func (msgs Messages) GsMaxParallel(count int) string {
+	return Catalog.Format(msgs.locale, "gsMaxParallel", map[string]any{"count": count})
+}
+
+// GsMaxParallelLabel says "Projects processed in parallel"
+// in the language the app shows.
+//
+// Accessible name of the parallel projects stepper.
+func GsMaxParallelLabel() string { return In(i18n.Locale()).GsMaxParallelLabel() }
+
+// GsMaxParallelLabel says "Projects processed in parallel"
+// in the language of msgs.
+//
+// Accessible name of the parallel projects stepper.
+func (msgs Messages) GsMaxParallelLabel() string {
+	return Catalog.Format(msgs.locale, "gsMaxParallelLabel", nil)
+}
+
+// GsMaxParallelHint says "1 runs batch tasks one project at a time."
+// in the language the app shows.
+//
+// Explanation of the parallel projects limit.
+func GsMaxParallelHint() string { return In(i18n.Locale()).GsMaxParallelHint() }
+
+// GsMaxParallelHint says "1 runs batch tasks one project at a time."
+// in the language of msgs.
+//
+// Explanation of the parallel projects limit.
+func (msgs Messages) GsMaxParallelHint() string {
+	return Catalog.Format(msgs.locale, "gsMaxParallelHint", nil)
+}

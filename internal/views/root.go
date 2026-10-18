@@ -42,6 +42,15 @@ type pageState struct {
 	newProfileName  string
 	languageChoice  string
 	browserLangEdit string
+
+	// 设置页（project_settings.go / global_settings.go）的局部状态。
+	psTried       string          // 已尝试为哪个项目打开设置（失败时不每帧重试）
+	gsTried       bool            // 已尝试打开全局设置
+	gsForm        *app.GlobalForm // 下列局部状态同步自哪个全局设置表单（换表单时重新同步）
+	confirmDelete bool            // 删除配置档的二次确认
+	languageSet   string          // 最近一次应用的 UI 语言（与 languageChoice 不同时调用 Shell.SetLocale）
+	watch         bool            // 文件监视开关的编辑值
+	maxParallel   float64         // 并行项目上限的编辑值
 }
 
 // View 构建整个窗口：左侧项目侧栏，右侧当前页面；整个窗口接受文件夹拖放。
